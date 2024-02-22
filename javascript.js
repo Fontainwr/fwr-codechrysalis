@@ -1,4 +1,18 @@
 // Technical Check-in Code
+//=====================================
+// explicit vs implicit coercion
+// statements vs expressions
+// scope
+// various array, object, and string methods and what they return
+// working with arrays / objects without mutating them
+// dot notation vs bracket notation
+// pass by value vs pass by reference
+// function declarations vs function expressions
+// for/in vs for/of
+//=====================================
+
+
+
 
 // Data Types
 // Explanation: We'll start by defining variables of different data types to demonstrate understanding.
