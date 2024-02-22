@@ -1,4 +1,4 @@
-//dot notation(directly in the object ) vs bracket notation(outside to then look at the direct object ). 
+//dot notation = (directly in the object ) vs bracket notation(outside to then look at the direct object ). 
 
 
 const object = {
