@@ -3,7 +3,7 @@
 
 
 
-//How do you loop through arrays? Can you use them on objects? If you can, should you?
+//How do you loop through arrays? Can you use them on objects? If you can, should you?While you technically can use array looping methods on objects (e.g., forEach), it's generally not recommended because objects are not inherently ordered like arrays. Using array looping methods on objects may not produce predictable results. 
 let arr = [ 1, 2, 3, 4, 5]; 
 
 for (let i =0; i < arr.length; i ++){

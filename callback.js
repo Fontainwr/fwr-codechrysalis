@@ -1,4 +1,7 @@
-//Return keywards and how it stops. Also, as mentioned above, the return keyword also stops a function from further executing. This means that if you have a return keyword in your for loop, the loop will terminate on the first go.
+//Return keywards and how it stops. Also, as mentioned above, 
+//the return keyword also stops a function from further executing. 
+//This means that if you have a return keyword in your for loop, the 
+//loop will terminate on the first go.
 
 //example
 
