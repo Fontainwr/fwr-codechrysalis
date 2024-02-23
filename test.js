@@ -1,2 +1,5 @@
-//Tuesday January 17th, 2023
+//Jan 17th 
 
+let value = true;
+
+console.log(typeof(value))
