@@ -1,5 +1,1 @@
-//Jan 17th 
-
-let value = true;
-
-console.log(typeof(value))
+//January 18th, 2023 
