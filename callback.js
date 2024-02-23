@@ -1,61 +1,12 @@
-//callbacks = will run the function "sayHi" and return "Hi" each time but only console.log once!!! 
+//Return keywards and how it stops. Also, as mentioned above, the return keyword also stops a function from further executing. This means that if you have a return keyword in your for loop, the loop will terminate on the first go.
 
+//example
 
-// function sayHi() {
-//     console.log('Hello');
-//     return 'Hi';
-//     }
-    
-// let foo = sayHi();
+function noReturn() {
+    console.log('Print!');
+}
 
-// console.log(foo);
-// console.log(foo);
-// console.log(foo);
-// console.log(foo);
+let whatsMyReturn = noReturn();
+console.log(whatsMyReturn);
 
-
-
-
-
-
-
-
-//Example = baz, foo, bar, baz(foo) is called.
-// Inside baz, 'baz' is logged to the console.
-// Then, fn() is called, where fn is the foo function.
-// Inside foo, 'foo' is logged to the console.
-// Then, bar() is called.
-// Inside bar, 'bar' is logged to the console.
-
-// function foo() {
-//     console.log('foo');
-//     bar();
-//     }
-
-// function bar() {
-//     console.log('bar');
-//     }
-
-// function baz(fn) {
-//     console.log('baz');
-//     fn();
-//     }
-
-// baz(foo);
-
-
-
-
-
-
-//Example #2 Choice B  <---Correct, t correctly passes the getNumber function as an argument to invokeSomething, and invokeSomething then invokes this function.
-
-//NOTE: Choice A does not work because it tries to invoke the getNumber function immediately and pass its return value as an argument to invokeSomething, which results in an error because the return value (5) is not a function.
-function getNumber() {
-    return 5;
-    }
-function invokeSomething(fn) {
-        return fn();
-    }
-// invokeSomething(getNumber()); // Choice A
-invokeSomething(getNumber); // Choice B
+//NOTE: let whatsMyReturn = noReturn(); calls the noReturn() function and assigns its return value to the variable whatsMyReturn. However, the noReturn() function doesn't explicitly return anything, so it implicitly returns undefined.Therefore, whatsMyReturn is assigned the value undefined.
