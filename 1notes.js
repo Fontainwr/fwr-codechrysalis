@@ -1,3 +1,92 @@
+//How do you loop through arrays? Can you use them on objects? If you can, should you?While you technically can use array looping methods on objects (e.g., forEach), it's generally not recommended because objects are not inherently ordered like arrays. Using array looping methods on objects may not produce predictable results. 
+let arr = [ 1, 2, 3, 4, 5]; 
+
+for (let i =0; i < arr.length; i ++){
+    console.log(arr[i])
+}
+
+//How do you loop through objects? Can you use them on arrays? If you can, should you?
+let objl = { run:12, jay:22, sara:29};{
+    for (let key in objl) {
+        console.log(key,objl[key])
+    }
+}
+
+
+//Example 2: Using an if statement with the loop for key/object
+let obj = { a:1, b:2, c:3}; {
+    for ( let key in obj){
+        if (key === "c"){
+            console.log(key + ":" + obj[key])
+        }
+    }
+}
+
+
+//How do you access values in objects? In arrays?
+
+let companyAge = { abc:23, time:43, cisysports:3453};
+
+console.log(companyAge.abc);
+//using dot
+console.log(companyAge["time"]);
+//using string 
+
+
+
+
+//dot notation = (directly in the object ) vs bracket notation(outside to then look at the direct object ). 
+
+
+const object = {
+    a: 1,
+    b: 2,
+    c: 3,
+    key: 23,
+    };
+
+let key = "b";
+let a = "c"; 
+
+    console.log(object.key); // 23 
+    console.log(object[key]); // 2
+    console.log(object.a);  // 1
+    console.log(object[a]); // 3
+
+
+
+
+//If you need to find a value in an object, how do you do it if you have the key? How do you do it if you do not have the key?
+let country = { usa:52, japan:65, canada:43};
+let countryPopulation = Object.values(country);
+console.log(countryPopulation)
+//For the keys 
+let countryA = { usa:52, japan:65, canada:43};
+let countryPopulationA = Object.keys(country);
+console.log(countryPopulationA)
+
+
+
+
+
+
+
+
+
+//How do you tell the difference between objects and arrays using code?
+
+let objac = {a: 1, b: 2, c: 3};
+let arrac = [1, 2, 3];
+
+console.log(typeof obj); // Output: object
+console.log(Array.isArray(objac)); // Output: false
+
+console.log(typeof arr); // Output: object
+console.log(Array.isArray(arrac)); // Output: true
+
+
+
+
 //Declare a function 'grab'.
 //function that takes two inputs: an array of arrays and an index
 //returns an array of the values stored at that index in each nested array.
@@ -82,9 +171,9 @@ let number = 511000;
 let inRange;
 
 if (number > min && number < max) {
-  inRange = "In range";
-} else {
-  inRange = "Out of range";
+    inRange = "In range";
+    } else {
+    inRange = "Out of range";
 }
 
 console.log(inRange);
@@ -105,3 +194,109 @@ if ( language == "english"){
     console.log("Language not supported")
 };
 
+
+//While Loop 
+let counter = 1; 
+while (counter <= 20) {
+    console.log(counter);
+    counter += 1;
+};
+
+
+
+//While loop for to add empty string 
+
+let num = 42;
+let numAsString = num + "";
+while (numAsString.length < 5) {
+  numAsString = "0" + numAsString;
+};
+console.log(numAsString);
+
+
+
+// while loop to count numbers in order 
+let endNumber = 100; // change this to other numbers
+let count = 1;
+let total = 0;
+while (count <= endNumber) {
+  total = total + count;
+  count = count + 1;
+}
+console.log(total);
+
+
+
+
+//while check the number in the section and what placement.
+//iterates.
+let number = 195714002;
+//convertts number to a string!!!
+let str = number + "";
+let count = 0;
+let foundAnySevens = false;
+while (count < str.length) {
+    let individualCharacter = str[count];
+    if (individualCharacter == "7") {
+        foundAnySevens = true;
+    }
+    count = count + 1;
+}
+console.log(foundAnySevens);
+
+
+
+//count how many "X" based on number 
+
+let size = 5;
+let row = "X";
+while (row.length <= size) {
+    console.log(row);
+    row = row + "X";
+}
+
+
+
+
+//Count how many "word" in the sentence 
+let sentence = "the rain in spain mainly falls on the plain";
+let index = 0;
+let numberOfThes = 0;
+while (index < sentence.length) {
+  if (sentence[index - 1] === "t" && sentence[index] === "h" && sentence[index + 1] === "e") {
+    numberOfThes = numberOfThes + 1;
+  }
+  index = index + 1;
+}
+console.log("There are " + numberOfThes + " the(s) in this sentence.");
+
+
+
+
+
+//while and if statement to count 
+let number = 99;
+let count = 0;
+let total = 0; 
+
+while ( count < number ){
+    count = count + 3;
+    total = count;
+    console.log(total)
+}  
+if (total === 99) {
+    console.log(100);
+}
+
+
+
+//html notes 
+<p>Item #1</p>
+<p class="foo" id="bar">Item #3</p>
+
+p = p 
+.foo = class 
+#bar = id 
+
+// text-decoration	= Can be used to underline text	text-decoration:
+// underline text-decoration: none
