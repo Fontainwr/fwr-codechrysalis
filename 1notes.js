@@ -627,6 +627,23 @@ console.log(asteriskCreator(5)); // Output will be *****
 
 
 
+//Function to see if even or odd 
+let numbers = (num) => {
+    if (num % 2 === 0 ) {
+        return "Even"
+    }else {
+        return "Odd"
+    }
+}
+
+console.log(numbers(13))
+
+
+
+
+
+
+
 
 //go through array 
 let name = ["jay", "sarah", "tier", "erwer"];
