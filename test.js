@@ -1,11 +1,15 @@
-//January 19th
+////////////////////////////////////////////////////
+//DO January 19th!!!!! then go to Janurary 24th!!!!!
+////////////////////////////////////////////////////
 
 
+//Function to see if even or odd 
+let numbers = (num) => {
+    if (num % 2 === 0 ) {
+        return "Even"
+    }else {
+        return "Odd"
+    }
+}
 
-
-
-//remove item from a array 
-let names = ["jaerwy", "sarahrewgr", "rgwrg", "rgwtrgtrg"];
-
-names.pop();
-console.log(names)
+console.log(numbers(13))

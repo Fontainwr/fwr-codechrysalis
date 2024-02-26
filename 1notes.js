@@ -113,6 +113,42 @@ console.log(Array.isArray(arrac)); // Output: true
 
 
 
+//Basic function creation
+let turnIntoQuestion = (sentence) => {
+    if (!sentence.endsWith("?")) {
+      sentence = sentence + "?";
+    }
+    return sentence;
+  };
+
+console.log(turnIntoQuestion("Where can I find the bathroom?"))
+
+
+
+
+
+
+//Function order ( This will be [2,2].....if let foo = 2 --> [2,1])
+let foo = 1;
+let condition = true;
+if (condition) {
+    foo = 2;
+    console.log(foo);
+}
+console.log(foo);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Declare a function 'grab'.
@@ -271,6 +307,39 @@ while (counter <= 20) {
     console.log(counter);
     counter += 1;
 };
+
+
+
+
+
+
+
+//while loop for numbers using array.
+let number = [ 1,2,3,4,5]
+let i = 0;
+while (i<5){
+    console.log(number[i]);
+    i = i += 1;
+}
+
+
+
+
+
+
+
+
+//while loop desplay "X" dnumber of "X"
+let result = "";
+let count = 0; 
+
+while (count < 40) {
+    result += "E";
+    count += 1;
+}
+
+console.log(result)
+
 
 
 
@@ -441,6 +510,58 @@ console.log(list);
 
 
 
+//Functions basic setup 
+
+let sayHello = () => {
+    console.log("Hello! I'm a block of code")
+}
+
+sayHello();
+
+
+
+
+
+
+
+
+
+//Using function basics 
+let name = (name1, amount) => {
+    if (amount === 1){
+        return name1;
+    } else {
+        return name1 + "s"
+    }
+};
+
+let amount = 14;
+let message = "I have " + amount + name(" Worker", amount);
+
+console.log(message);
+
+
+
+
+
+
+
+
+
+//Function to see if even or odd 
+let numbers = (num) => {
+    if (num % 2 === 0 ) {
+        return "Even"
+    }else {
+        return "Odd"
+    }
+}
+
+console.log(numbers(13))
+
+
+
+
 
 
 
@@ -489,6 +610,19 @@ console.log(getLast("the"))
 
 
 
+//Function asteriskCreator to create a string of asterisks:
+function asteriskCreator(num) {
+    let result = '';
+    for (let i = 0; i < num; i++) {
+        result += '*';
+    }
+    return result;
+}
+
+console.log(asteriskCreator(5)); // Output will be *****
+
+
+
 
 
 
@@ -501,6 +635,100 @@ while ( i<4){
     console.log(name[i]);
     i += 1;
 }
+
+
+
+
+
+
+
+
+
+//remove item from a array and print all 
+let names = ["jaerwy", "sarahrewgr", "rgwrg", "rgwtrgtrg"];
+
+names.pop();
+let i = 0;
+while (i < names.length) {
+console.log(names[i]);
+i += 1;
+};
+
+
+
+
+
+
+
+//adding item to array 
+let names1 = ["jaerwy", "sarahrewgr", "rgwrg", "rgwtrgtrg"];
+let final = names1.push("tierofe");
+console.log(final); // This will output the new length of the array after adding "tierofe"
+
+
+
+
+
+
+
+//modify array 
+let names12 = ["jaerwy", "sarahrewgr", "rgwrg", "rgwtrgtrg"];
+names12[2] = "tgjefgrsgtrgrgrtgtrgtrger"
+console.log(names12); // This will output the new length of the array after adding "tierofe"
+
+
+
+
+
+
+
+
+//add an extra item to the array 
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday"];
+days.push("Friday", "Saturday", "Sunday")
+console.log(days); // Displays all 7 days
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// join() to list all items in an array
+let moons = ["Deimos", "Phobos", "Howard"];
+// ADD YOUR CODE HERE
+console.log(moons.join(", ")); // Should display Deimos and Phobos
+
+
+
+
+
+
+
+
+
+
+
+// Return every other item in array 
+let moons = [1,2,3,4,5,6,7,8,9,10];
+// ADD YOUR CODE HERE
+for ( let i = 0; i < moons.length; i += 2 ){
+    console.log(moons[i])
+}
+
+
+
+
+
 
 
 
