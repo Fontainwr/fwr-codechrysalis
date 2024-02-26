@@ -5,12 +5,21 @@ for (let i =0; i < arr.length; i ++){
     console.log(arr[i])
 }
 
+
+
+
+
 //How do you loop through objects? Can you use them on arrays? If you can, should you?
 let objl = { run:12, jay:22, sara:29};{
     for (let key in objl) {
         console.log(key,objl[key])
     }
 }
+
+
+
+
+
 
 
 //Example 2: Using an if statement with the loop for key/object
@@ -23,6 +32,13 @@ let obj = { a:1, b:2, c:3}; {
 }
 
 
+
+
+
+
+
+
+
 //How do you access values in objects? In arrays?
 
 let companyAge = { abc:23, time:43, cisysports:3453};
@@ -31,6 +47,8 @@ console.log(companyAge.abc);
 //using dot
 console.log(companyAge["time"]);
 //using string 
+
+
 
 
 
@@ -52,6 +70,11 @@ let a = "c";
     console.log(object[key]); // 2
     console.log(object.a);  // 1
     console.log(object[a]); // 3
+
+
+
+
+
 
 
 
@@ -87,6 +110,11 @@ console.log(Array.isArray(arrac)); // Output: true
 
 
 
+
+
+
+
+
 //Declare a function 'grab'.
 //function that takes two inputs: an array of arrays and an index
 //returns an array of the values stored at that index in each nested array.
@@ -95,20 +123,32 @@ const finalArray = []
 function grab(arr, index) {
     for ( let i = 0; i < arr.length; i ++ ) {
         const indexLocation = arr[i];
-      if (index >= 0 && index < indexLocation.length ) {
-          const valueIndex = indexLocation[index];
-          finalArray.push(valueIndex)
-      }
+        if (index >= 0 && index < indexLocation.length ) {
+            const valueIndex = indexLocation[index];
+            finalArray.push(valueIndex)
+        }
+        }
+        return finalArray;
     }
-    return finalArray;
-}
 
 
-  
+
+
+
+
+
+
+
+    
 //Repeat example
 let message = "We are the the champions";
 let repeatFiveTimes = message.repeat(5);
 console.log(repeatFiveTimes)
+
+
+
+
+
 
 
 
@@ -117,6 +157,11 @@ let messages = "We are the the champions.";
 let lastCharacter = messages.slice(-1);
 let period = lastCharacter === ".";
 console.log(period)
+
+
+
+
+
 
 
 //find distance and index 
@@ -130,6 +175,11 @@ if (firstIndex !== -1 ) {
     distanceFromBeginning = -1
 };
 console.log(distanceFromBeginning);
+
+
+
+
+
 
 
 
@@ -149,6 +199,11 @@ console.log(distanceFromEnd)
 
 
 
+
+
+
+
+
 //check leapYear 
 let name = "Fontain";
 let year = 1981;
@@ -161,6 +216,11 @@ if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 ) {
     }
 
 console.log(isLeapYear);
+
+
+
+
+
 
 
 
@@ -181,6 +241,11 @@ console.log(inRange);
 
 
 
+
+
+
+
+
 //If statement example 
 let language = "japanese";
 
@@ -195,12 +260,22 @@ if ( language == "english"){
 };
 
 
+
+
+
+
+
 //While Loop 
 let counter = 1; 
 while (counter <= 20) {
     console.log(counter);
     counter += 1;
 };
+
+
+
+
+
 
 
 
@@ -215,6 +290,11 @@ console.log(numAsString);
 
 
 
+
+
+
+
+
 // while loop to count numbers in order 
 let endNumber = 100; // change this to other numbers
 let count = 1;
@@ -224,6 +304,11 @@ while (count <= endNumber) {
   count = count + 1;
 }
 console.log(total);
+
+
+
+
+
 
 
 
@@ -246,6 +331,11 @@ console.log(foundAnySevens);
 
 
 
+
+
+
+
+
 //count how many "X" based on number 
 
 let size = 5;
@@ -254,6 +344,11 @@ while (row.length <= size) {
     console.log(row);
     row = row + "X";
 }
+
+
+
+
+
 
 
 
@@ -269,6 +364,11 @@ while (index < sentence.length) {
   index = index + 1;
 }
 console.log("There are " + numberOfThes + " the(s) in this sentence.");
+
+
+
+
+
 
 
 
@@ -290,6 +390,11 @@ if (total === 99) {
 
 
 
+
+
+
+
+
 //html notes 
 <p>Item #1</p>
 <p class="foo" id="bar">Item #3</p>
@@ -300,3 +405,104 @@ p = p
 
 // text-decoration	= Can be used to underline text	text-decoration:
 // underline text-decoration: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Arrays info to push and print total 
+
+let numbers = [1, 2, 3, 4, 5, 6];
+let i = 0;
+let total = 0;
+let list = []
+while ( i < numbers.length) {
+    total = total + numbers[i];
+    i += 1;
+    list.push(total);
+};
+
+console.log(total)
+console.log(list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Functions (find average)
+let findAverage = (a, b) => {
+    return (a + b) / 2;
+    };
+  console.log(findAverage(3, 6)); // shows 4.5
+
+
+
+
+
+
+
+
+
+
+
+
+//function ( Number squared )
+let square = (num) => {
+    return num * num;
+}
+console.log(square(12))
+
+
+
+
+
+
+
+
+
+
+
+
+//Funtion return last character of string 
+let getLast = (str) => {
+    let lastLetter = str.trim().charAt(str.length - 1);
+    return lastLetter;
+}
+console.log(getLast("the"))
+
+
+
+
+
+
+
+
+
+//go through array 
+let name = ["jay", "sarah", "tier", "erwer"];
+let i = 0;
+while ( i<4){
+    console.log(name[i]);
+    i += 1;
+}
+
+
+
+
+
