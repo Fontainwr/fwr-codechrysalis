@@ -20,6 +20,41 @@ let objl = { run:12, jay:22, sara:29};{
 
 
 
+//Objects and items 
+
+let items = [ 
+    "grilled Cheese",
+    400,
+    ["Anime","Other"]
+];
+
+console.log(`We have ${item[0]} and it costs about ${item[1]}, and we will bring ${item[3]}`)
+
+
+
+
+
+
+
+
+
+//get item based on KEY and VALUES 
+let item = {
+    name: "Grilled Cheese",
+    price: 400,
+    allergens: ["Anise", "Other"]
+};
+
+console.log(`We have ${item.name} and it costs about ${item.price}, and we will bring ${item.allergens.join(' and ')}.`);
+
+
+
+
+
+
+
+
+
 
 
 //function to return a string with spaces in between.
@@ -831,6 +866,25 @@ let array = (nums) => {
 
 let nums = [ 1,2,3,4,5]
 console.log(array(nums))
+
+
+
+
+
+
+
+
+//Build a trinagle using a for loop function 
+
+function buildTrinagle(num) {
+    for ( let i = 1; i <= num; i++) {
+        let trinagle = "* ";
+        console.log(trinagle.repeat(i));
+    }
+}
+
+buildTrinagle(10)
+
 
 
 
