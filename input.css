@@ -1,15 +1,16 @@
-
-
-p {
-    color: rgba(227, 0, 0, 0.58);
+.layout {
+    display: flex;
 }
 
-
-.lemon { 
-    background-color: yellow;
+.col {
+    flex: 8;
+    background-color:green ;
+    padding: 12px;
+    border-radius: 12px;
+    border-spacing: 12px;
+    margin: 32px;
 }
 
-
-h1 {
-    border-bottom: 3px solid blue;
+.col p {
+    size: 23px;
 }

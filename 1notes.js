@@ -22,6 +22,26 @@ let objl = { run:12, jay:22, sara:29};{
 
 
 
+//function to return a string with spaces in between.
+function kerningLoop(str) {
+    let spaceTop = "";
+
+        for ( let i = 0; i < str.length; i++) {
+            spaceTop += str[i];
+        
+        if (i !== str.length - 1) {
+            spaceTop += " ";
+        }
+    }
+    return spaceTop;
+}
+console.log(kerningLoop("cat"));
+
+
+
+
+
+
 //Example 2: Using an if statement with the loop for key/object
 let obj = { a:1, b:2, c:3}; {
     for ( let key in obj){
@@ -652,6 +672,141 @@ while ( i<4){
     console.log(name[i]);
     i += 1;
 }
+
+
+
+
+
+
+
+
+
+//Add all number from array using for loop
+let array = [1,2,3,4,5,6,7,8,9,10,11];
+let findSum = (numbers) => {
+    // WRITE YOUR CODE HERE.
+    let sum = 0;
+    for ( let i = 0; i < numbers.length; i++) {
+        sum += numbers[i]
+    };
+    return sum 
+};
+console.log(findSum(array))
+
+
+
+
+
+
+
+
+
+
+
+//find average all number from array using for loop
+let array = [1,2,3,4,5,6,7,8,9,10,11];
+let findSum = (numbers) => {
+    // WRITE YOUR CODE HERE.
+    let sum = 0;
+    for ( let i = 0; i < numbers.length; i++) {
+        sum += numbers[i]
+    };
+    return sum / numbers.length;
+};
+console.log(findSum(array))
+
+
+
+
+
+
+
+
+//function count up using FOR loop 
+function countUp(num) {
+    for ( let i = 1; i <=num; i++){
+        console.log(i)
+    }
+}
+countUp(5);
+
+
+
+
+
+//function count up using FOR loop reverse text 
+function reversePrint(array){
+    let reverse = array.reverse()
+    return reverse
+}
+
+console.log(reversePrint(["Almond Eye", "Efforia", "Equinox"]));
+
+
+
+
+
+//for Loop countdown to number. 
+let happyNewYear = () => {
+    let countDown = 60;
+    for (let t = countDown; t >= 1; t--){
+        console.log(t);
+    }
+    return "Happy New Year!";
+};
+console.log(happyNewYear())
+
+
+
+
+//for loops to add all arrays 
+let array = (nums) => { 
+    let total = 0; 
+    for ( let i = 0; i < nums.length; i++){
+        console.log(nums[i]);
+        total += nums[1]; 
+    } 
+
+    return total; 
+}
+
+let nums = [ 1,2,3,4,5]
+console.log(array(nums))
+
+
+
+
+//function to return a string with spaces in between.
+function kerningLoop(str) {
+    let spaceTop = "";
+
+        for ( let i = 0; i < str.length; i++) {
+            spaceTop += str[i];
+        
+        if (i !== str.length - 1) {
+            spaceTop += " ";
+        }
+    }
+    return spaceTop
+}
+console.log(kerningLoop("cat"));
+
+
+
+
+
+// While loops [ while something is something it does X when someting stops]
+//for loops 
+for (let i = 1; i <= 5; i++) {
+    console.log(i); // Output: 1, 2, 3, 4, 5 (each on a new line)
+}
+//while loops 
+let count = 5;
+while (count > 0) {
+    console.log(count); // Output: 5, 4, 3, 2, 1 (each on a new line)
+    count--; // Decrementing count in each iteration
+}
+
 
 
 

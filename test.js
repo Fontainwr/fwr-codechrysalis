@@ -1,12 +1,17 @@
-// January 24th
+// January 24
 
 
-// let counter = 1;
-// while (counter <= 10 ) {
-//     console.log(counter);
-//     counter += 1;
-// };
+//function to return a string with spaces in between.
+function kerningLoop(str) {
+    let spaceTop = "";
 
-for (let counter = 1; counter <= 10; counter += 1) {
-    console.log(counter);
-  }
+        for ( let i = 0; i < str.length; i++) {
+            spaceTop += str[i];
+        
+        if (i !== str.length - 1) {
+            spaceTop += " ";
+        }
+    }
+    return spaceTop;
+}
+console.log(kerningLoop("cat"));
