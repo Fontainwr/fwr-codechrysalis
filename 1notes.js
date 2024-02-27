@@ -73,6 +73,43 @@ console.log(companyAge["time"]);
 
 
 
+
+
+
+
+//Objects for storing items and retrieveing info
+let books = [
+    {
+        title: "Cat in the Hat",
+        author: "Dr. Seuss",
+        wordCount: 1621
+        },
+        {
+        title: "Where's Waldo",
+        author: "Martin Handford",
+        wordCount: 0
+        },
+        {
+        title: "Lord of the Flies",
+        author: "William Golding",
+        wordCount: 59900
+        }
+    ];
+
+
+    let totalWords = 0; 
+
+    for ( let i = 0; i< books.length; i++){
+        totalWords += books[i].wordCount;
+    }
+
+    console.log("There are a total of " + totalWords + " words in these books.");
+
+
+
+
+
+
 //dot notation = (directly in the object ) vs bracket notation(outside to then look at the direct object ). 
 
 
@@ -755,6 +792,28 @@ let happyNewYear = () => {
     return "Happy New Year!";
 };
 console.log(happyNewYear())
+
+
+
+
+
+
+
+//for loops coutdown to text 
+
+function countDown(num) {
+    for(i = num; i >= 0; i--){
+        console.log(i);
+        if (i === 0){
+        return "Blast Off";
+        }
+    }
+}
+
+console.log(countDown(100));
+
+
+
 
 
 
