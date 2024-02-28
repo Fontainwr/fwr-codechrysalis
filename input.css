@@ -1,27 +1,15 @@
-body {
-    background-color: lightgray; /* Set background color to light gray */
-    font-family: sans-serif;
+p {
+    color: blue;
 }
 
-#main {
-    max-width: 400px; /* Set maximum width for the main content */
-    margin: 12px; /* Center the content horizontally with some margin */
-    padding: 12px; /* Add padding around the edge of the article */
+.post p { 
+    background-color: blue;
 }
 
-#lambda {
-    float: left; /* Float the lambda image to the left */
-    margin-right: 12px; /* Add some margin to the right of the lambda image */
+.post {
+    font-weight: bold;
 }
 
-#lambda img {
-    width: 200px; /* Set the width of the lambda image */
-}
+.link:visited {
 
-#content {
-    overflow: hidden; /* Clear the float */
-}
-
-#content p {
-    margin-top: 51; /* Remove top margin for the first paragraph */
 }
