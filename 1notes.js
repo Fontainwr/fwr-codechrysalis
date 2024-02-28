@@ -52,6 +52,111 @@ console.log(`We have ${item.name} and it costs about ${item.price}, and we will 
 
 
 
+//using Object.key and Object.values 
+let data = {};
+data["a"] = 34324231; 
+data["b"] = 122222; 
+data["c"] = 123; 
+data["d"] = 12; 
+console.log(Object.keys(data))
+console.log(Object.values(data))
+
+
+
+//Function counts string and returns ojbect that count the occurences for 
+//each letter 
+function countLetter(str){
+    let counter = {};
+    for (let i = 1; i < str.length; i++){
+        let letter = str[i] ;
+    if (counter[letter] === undefined){
+        counter[letter] = 1; 
+    } else {
+        counter[letter]++
+        }
+    }
+    return counter;
+}
+console.log(countLetter("rejwenfrekrekj"))
+
+
+
+
+
+
+//function remove Repeats that takes an array of strings 
+//returns a new array. 
+
+function removeRepeats(arr){
+    let newArray = {};
+    for (let i = 0; i < arr.length; i++) {
+        newArray[arr[i]] = true;
+    }
+    return Object.keys(newArray);
+}
+console.log(removeRepeats(["a", "b", "c", "b", "a", "d"]));
+
+
+
+
+
+
+
+
+
+//Write a function that takes a string and returns a lookup 
+//object that counts the number of each vowel (a, e, i, o, u).
+
+function countVowels(str) {
+    let vowels = { 'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0 };
+    let strLowerCase = str.toLowerCase();
+
+    for (let char of strLowerCase) {
+        if (vowels.hasOwnProperty(char)) {
+            vowels[char]++;
+        }
+    }
+
+    // Remove vowels with count 0
+    for (let vowel in vowels) {
+        if (vowels[vowel] === 0) {
+            delete vowels[vowel];
+        }
+    }
+
+    return vowels;
+}
+
+console.log(countVowels("digging for apples")); 
+// Output: { "i": 2, "o": 1, "a": 1, "e": 1 }
+
+
+
+
+//Write a function that takes an array of strings. 
+//It should return true if the array contains duplicate 
+//copies of a string and return false if all the strings are unique.
+function hasDuplicateStrings(arr) {
+    let stringMap = {};
+    
+    for(str of arr){
+        if(stringMap[str]) {
+            return true;
+        } else {
+            stringMap[str] = true;
+        }
+    } 
+
+    return false; // No duplicates found
+}
+
+console.log(hasDuplicateStrings(["apple", "banana", "apple"])); // Output: true
+console.log(hasDuplicateStrings(["apple", "banana", "orange"])); // Output: false
+
+
+
+
+
 
 
 
@@ -170,7 +275,7 @@ let a = "c";
 
 
 
-
+//using objects 
 let movies = [
     {
         title: "Star Wars",
@@ -267,6 +372,46 @@ console.log(findFilms("Star Wars"))
 
 
 
+
+
+
+
+
+
+
+
+//loopup table using math . random 
+let restaurants = [
+    {
+        name: "Olive Garden",
+        cuisine: "Italian",
+        rating: 4.2,
+        hasDriveThru: false,
+    },
+    {
+        name: "IHOP",
+        cuisine: "American",
+        rating: 3.1,
+        hasDriveThru: false,
+    },
+    {
+        name: "Panda Express",
+        cuisine: "Chinese",
+        rating: 4.0,
+        hasDriveThru: true,
+    }
+];
+  let pickRandomRestaurant = () => {
+    let index = Math.floor(Math.random() * restaurants.length);
+    let restaurant = restaurants[index];
+    console.log("I have chosen the " + restaurant.name + " restaurant " + "becuase I like " + restaurant.cuisine + " types of food!");
+    console.log("It has a review score of " + restaurant.rating);
+    if (restaurants.hasDriveThru) {
+      console.log("A drive-thru window is available");
+    }
+  };
+
+pickRandomRestaurant();
 
 
 
@@ -874,6 +1019,47 @@ console.log(findSum(array))
 
 
 
+
+
+
+//function that finds the most common character in the string 
+function findCommon(word) {
+    let currentTotal = 0; 
+    let bestCount = 0; 
+    let bestLetter = word[0];
+    for (let i = 0; i < word.length; i++){
+        currentTotal = 0;
+        for (let t = 0; t < word.length; t +=1 ) {
+            if (word[t] === word[i]){
+                currentTotal += 1;
+            }
+        }
+        if(bestCount < currentTotal) {
+            bestLetter = word[i];
+            bestCount = currentTotal;
+        }
+    }
+    return bestLetter
+}
+
+
+//or you can do this using undifined to find most used letter. 
+let findMostCommon = (str) => {
+    let counter = {};
+    let bestLetter1 = undefined;
+    for (let i = 0; i < str.length; i += 1) {
+        let letter = str[i];
+        if (counter[letter] === undefined) {
+            counter[letter] = 1;
+        }
+        if (counter[letter] > counter[bestLetter1] || bestLetter1 === undefined) {
+            bestLetter1 = letter;
+        }
+    }
+    return bestLetter1;
+}
+
+console.log(findMostCommon("ujrfnjkfkfjknvf"));
 
 
 
