@@ -166,6 +166,111 @@ let a = "c";
 
 
 
+    
+
+
+
+
+let movies = [
+    {
+        title: "Star Wars",
+        year: 1977,
+        length: 121,
+        blackAndWhite: false
+    },
+    {
+        title: "Citizen Kane",
+        year: 1941,
+        length: 119,
+        blackAndWhite: true
+    },
+    {
+        title: "We Bought a Zoo",
+        year: 2011,
+        length: 124,
+        blackAndWhite: false
+    },
+    {
+        title: "The Wizard of Oz",
+        year: 1939,
+        length: 102,
+        blackAndWhite: false
+    },
+    {
+        title: "The Matrix",
+        year: 1999,
+        length: 127,
+        blackAndWhite: false
+    }
+];
+
+
+
+//find total length of something 
+
+let findTotalTime = () => {
+    let totalMovieLength = 0;
+    for ( let i = 0; i < movies.length; i++){
+        let movie = movies[i];
+        totalMovieLength += movie.length;
+    }
+    return totalMovieLength;
+}
+
+console.log(findTotalTime())
+
+
+
+//find count Color Films that are black and white
+let findColorFilms = () => {
+    let totalColorFilms = [];
+    for ( let i = 0; i < movies.length; i++){
+        let movie = movies[i];
+    if (movie.blackAndWhite) {
+        totalColorFilms.push(movie)
+        }
+    }
+    return totalColorFilms.length;
+}
+console.log(findColorFilms())
+
+
+
+//find films before a data 
+let findFilmsBefore = (years) => {
+    let totaFilmsBefore= [];
+    for ( let i = 0; i < movies.length; i++){
+        let movie = movies[i];
+    if (movie.year < years ) {
+        totaFilmsBefore.push(movie)
+        }
+    }
+    return totaFilmsBefore.length;
+}
+console.log(findFilmsBefore(1992))
+
+
+
+//does film exist?  
+let findFilms = (name) => {
+    let weHave = false;
+    for ( let i = 0; i < movies.length; i++){
+        let movie = movies[i];
+    if (movie.title === name ) {
+        weHave = true; 
+        break;
+        }
+    }
+    return weHave;
+}
+console.log(findFilms("Star Wars"))
+
+
+
+
+
+
+
 
 
 

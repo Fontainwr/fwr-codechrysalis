@@ -1,16 +1,27 @@
-.layout {
-    display: flex;
+body {
+    background-color: lightgray; /* Set background color to light gray */
+    font-family: sans-serif;
 }
 
-.col {
-    flex: 8;
-    background-color:green ;
-    padding: 12px;
-    border-radius: 12px;
-    border-spacing: 12px;
-    margin: 32px;
+#main {
+    max-width: 400px; /* Set maximum width for the main content */
+    margin: 12px; /* Center the content horizontally with some margin */
+    padding: 12px; /* Add padding around the edge of the article */
 }
 
-.col p {
-    size: 23px;
+#lambda {
+    float: left; /* Float the lambda image to the left */
+    margin-right: 12px; /* Add some margin to the right of the lambda image */
+}
+
+#lambda img {
+    width: 200px; /* Set the width of the lambda image */
+}
+
+#content {
+    overflow: hidden; /* Clear the float */
+}
+
+#content p {
+    margin-top: 51; /* Remove top margin for the first paragraph */
 }
