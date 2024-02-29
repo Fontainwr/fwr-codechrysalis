@@ -1,15 +1,13 @@
-p {
-    color: blue;
+
+
+.warning {
+    width: 333px;
+    height: 343px;
+    font-size: large;
 }
 
-.post p { 
-    background-color: blue;
-}
 
-.post {
-    font-weight: bold;
-}
 
-.link:visited {
-
+.warning span {
+    text-decoration: underline;
 }
