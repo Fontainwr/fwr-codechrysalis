@@ -1490,3 +1490,86 @@ for (let food of items) {
 
 
 
+
+
+
+
+
+
+
+
+
+//Dom element access children 
+
+//1.) document.head.children =<head>[title, link, style]</head>
+//2.) document.head.children[0] = <head>[<title>"next"<title>]</head>
+//3.) document.head.children[0].innerText = <head>[<title>"NEW"<title>]</head>
+
+//NOTE: [ .childNodes ] = Listed of all nested items.
+//NOTE: [ .children ] = Listed just the tag elements.
+
+//document.getElementById(nameOfId) = Search id=""
+//document.getElementByClassName(nameOfClass)  = Search class=""
+//document.getElementsByTagName("p") = All paragraph 
+
+
+
+<body>
+  <h1 id="page-title">Hello</h1>
+  <article>
+    <p class="fact">America is a country</p>
+    <p>It is filled with many states</p>
+    <div>
+      <p id="shape-declaration">This is a list of the states shaped like rectangles:</p>
+      <ul id="state-list">
+        <li>Wyoming</li>
+        <li>Colorado</li>
+      </ul>
+    </div>
+    <p class="fact">
+      Some states like Kansas, North Dakota, and New Mexico, are almost
+      shaped like rectangles.
+    </p>
+    <p class="fact">
+      America's favorite food is pizza.
+    </p>
+  </article>
+  <script src="code.js"></script>
+</body>
+
+
+
+// Function to change the title of the HTML document
+function changeTitle(str) {
+    let pageTitle = document.getElementById("page-title");
+    pageTitle.innerText = str;
+}
+
+// Function to get a list of states shaped like rectangles
+function getRectangleStates() {
+    let shapeDeclaration = document.getElementById("shape-declaration");
+    let stateList = shapeDeclaration.nextElementSibling.children;
+    let rectangleStates = [];
+    for (let li of stateList) {
+        rectangleStates.push(li.innerText);
+    }
+    return rectangleStates;
+}
+
+// Function to get a list of facts from elements with class="fact"
+function getFacts() {
+    let factElements = document.getElementsByClassName("fact");
+    let facts = [];
+    for (let element of factElements) {
+        facts.push(element.innerText);
+    }
+    return facts;
+}
+
+// Function to change the list of states
+function changeStateList(newList) {
+    let stateListItems = document.getElementsByTagName("li");
+    for (let i = 0; i < stateListItems.length; i++) {
+        stateListItems[i].innerText = newList[i];
+    }
+}
