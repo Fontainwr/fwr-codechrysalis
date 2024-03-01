@@ -1482,3 +1482,11 @@ console.log(doesListHaveString(["a", "b", "c"], "d")); // should return false
 
 
 
+//for of loop 
+let items = [ "apple", "banana", "canteloupe", "dog"];
+for (let food of items) {
+    console.log(food);
+}
+
+
+
