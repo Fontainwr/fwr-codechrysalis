@@ -215,8 +215,6 @@ console.log(companyAge["time"]);
 
 
 
-
-
 //Objects for storing items and retrieveing info
 let books = [
     {
@@ -401,15 +399,15 @@ let restaurants = [
         hasDriveThru: true,
     }
 ];
-  let pickRandomRestaurant = () => {
-    let index = Math.floor(Math.random() * restaurants.length);
-    let restaurant = restaurants[index];
-    console.log("I have chosen the " + restaurant.name + " restaurant " + "becuase I like " + restaurant.cuisine + " types of food!");
-    console.log("It has a review score of " + restaurant.rating);
-    if (restaurants.hasDriveThru) {
-      console.log("A drive-thru window is available");
-    }
-  };
+    let pickRandomRestaurant = () => {
+        let index = Math.floor(Math.random() * restaurants.length);
+        let restaurant = restaurants[index];
+        console.log("I have chosen the " + restaurant.name + " restaurant " + "becuase I like " + restaurant.cuisine + " types of food!");
+        console.log("It has a review score of " + restaurant.rating);
+        if (restaurants.hasDriveThru) {
+        console.log("A drive-thru window is available");
+        }
+    };
 
 pickRandomRestaurant();
 
@@ -478,9 +476,6 @@ if (condition) {
     console.log(foo);
 }
 console.log(foo);
-
-
-
 
 
 
@@ -1494,6 +1489,94 @@ for (let food of items) {
 
 
 
+
+//for of loops [ let __ of "arr" ]
+
+let bunnies = [ 
+    "Flopsy",
+    "Mopsy",
+    "Cottontail",];
+
+for ( let people of bunnies) {
+    console.log("Hello, " + people);
+}
+
+
+
+
+//for of loop count letter in a word.
+let word = "indivisibility";
+let iClount = 0;
+for ( let letter of word.split("")) {
+    if ( letter === "i") {
+        iClount += 1;
+    }
+}
+
+console.log("The word " + word + " has " + "[" + iClount + "]" + " I's in it!" )
+
+
+
+
+
+//for of loop to find average of a number array
+let nums = [2,6,10,12,14,42,55,78,99];
+let sum = 0;
+for (let num of nums) {
+    sum += num; 
+};
+console.log("The average is: " + sum / nums.length);
+
+
+
+
+
+
+//for of loop to check the length of the word 
+let charCount = (arr) => {
+    let result = [];
+    for ( let length of arr) {
+        result.push(length.length);
+    }
+    return result;
+}
+console.log(charCount(["cat", "monkey", "hippopotamus"]));
+
+
+
+
+//function using for of loop to count number of characters in each array
+let charCountA = (arr) => {
+    let result = [];
+    for ( let count of arr){
+        result += count.length;
+    }
+    return result;
+}
+console.log(charCountA(["cat", "monkey", "hippopotamus"])); // Output: [3, 6, 12]
+
+
+
+
+
+
+
+//function using for of loop to count number of "o" in each character 
+//going into and array --> and looking at a word 
+// string of arr -----> then!!!! -----> word of string 
+let oCount = (arr) => {
+    let result = 0;
+    for( let string of arr) {
+        for ( let word of string){
+            if(word === "o") {
+                result++
+            }
+        }
+    }
+    return result;
+}
+console.log(oCount(["cat", "monkey", "hippopotamus"]));
+// Output: 3 (because monkey has 1 o and hippopotamus has 2 o's)); // Output: [3, 6, 12]
 
 
 
