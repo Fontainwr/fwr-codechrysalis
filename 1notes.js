@@ -468,6 +468,30 @@ console.log(turnIntoQuestion("Where can I find the bathroom?"))
 
 
 
+
+// There are three ways to declare a function. So far we've been using what's called fat arrow syntax. It has looked like this:
+let makeFunnyNoise = () => {
+    console.log("Toot toot!");
+};
+
+
+// Another way to create functions is by using the function keyword. It looks fairly similar:
+let makeFunnyNoise = function() {
+    console.log("Toot toot!");
+};
+
+
+// The third way to create a function is also by using the function keyword but in a slightly different order:
+function makeFunnyNoise() {
+    console.log("Toot toot!");
+}
+
+
+
+
+
+
+
 //Function order ( This will be [2,2].....if let foo = 2 --> [2,1])
 let foo = 1;
 let condition = true;
@@ -1561,6 +1585,79 @@ console.log(charCountA(["cat", "monkey", "hippopotamus"])); // Output: [3, 6, 12
 
 
 
+
+
+
+//For of loop that counts the arrays
+function sum(arr) {
+    let total = 0;
+    for ( let i of arr ){
+        total += i;
+    }
+    return total; 
+}
+console.log(sum([1, 4, 2, 9])); // returns 16
+
+
+
+//Counts number of spaces in string 
+function countSpaces(str) {
+    let result = 0; 
+    for ( let space of str ){
+        if ( space === " "){
+            result += 1;
+        }
+    }
+    return result; 
+};
+console.log(countSpaces("This is an example")); // returns 3
+
+
+
+
+//function takes number and returns an array of numbers that count from 1 to that number 
+function createNumberArray(num){
+    let result = [];
+    for ( let i = 1; i <= num; i++){
+        result.push(i);
+    }
+    return result 
+}
+console.log(createNumberArray(5)); // returns [1, 2, 3, 4, 5])
+
+
+
+
+
+
+
+
+//function if statement basics.
+function lessen(num) {
+    if ( num === 0 ){
+        return 0;
+    }else if (num > 0) {
+        return num - 1;
+    } else {
+        return num +1 
+    }
+    return num 
+}
+
+console.log(lessen(4)); // should return 3
+console.log(lessen(-2)); // should return -1
+console.log(lessen(0)); // should return 0
+console.log(lessen(0.5)); // should return -0.5
+
+
+
+
+
+
+
+
+
+
 //function using for of loop to count number of "o" in each character 
 //going into and array --> and looking at a word 
 // string of arr -----> then!!!! -----> word of string 
@@ -1654,5 +1751,97 @@ function changeStateList(newList) {
     let stateListItems = document.getElementsByTagName("li");
     for (let i = 0; i < stateListItems.length; i++) {
         stateListItems[i].innerText = newList[i];
+    }
+}
+
+
+
+
+//Create a "p" to change "p"
+let newPharagraph = document.createElement("p");
+newPharagraph.inerText = "Hello! This is a pargraph";
+document.body.append(newPharagraph); 
+
+
+
+// .childNodes returns a list of all DOM nodes that belong to this 
+//parent.
+
+// .children returns a list of all the DOM elements that belong to 
+//this parent (remember that an Element is a tag and a node is anything in the document, such as Elements, text, etc)
+
+
+//,fistChild and .lastChild and .removeChild  cna be used as well. 
+
+
+
+
+
+
+
+//accessing an object using [ .THIS ] 
+let person = {
+    name: "Fontain",
+    greet: function() {
+      // 'this' is not a normal variable. It is automatically defined.
+      console.log("Hello, my name is " + this.name);
+    },
+  };
+  
+  person.greet(); // --> Hello, my name is Blake
+
+
+
+
+
+
+  
+//DOM  Create a new button element
+let newButton = document.createElement("button");
+newButton.innerText = "Push";
+
+//DOM Append the button to the body element
+document.body.appendChild(newButton);
+
+
+// Create a click event listener for the button
+newButton.addEventListener("click", function() {
+    // Remove the button from the DOM
+    document.body.removeChild(newButton);
+    // Or, you can remove the button using the parent node
+    // newButton.parentNode.removeChild(newButton);
+});
+
+
+
+
+//Example of DOM add and remove 
+
+
+//HTML 
+// <ul id="itemList">
+// <li>A</li>
+// <li>B</li>
+// <li>C</li>
+// </ul>
+// <input type="text" id="addItemInput">
+// <button onclick="addItem()">Add</button>
+// <button onclick="removeItem()">Remove</button>
+
+function addItem() {
+    let inputText = document.getElementById("addItemInput").value;
+
+    if (inputText.trim() !== "") {
+        let newItem = document.createElement("li");
+        newItem.innerHTML = inputText;
+        document.getElementById("itemList").append(newItem);
+        document.getElementById("addItemInput").value = "";
+    }
+}
+
+function removeItem() { 
+    lastItem = document.getElementById("itemList").lastElementChild;
+    if(lastItem !== null) {
+        document.getElementById("itemList").removeChild(lastItem)
     }
 }
