@@ -1024,6 +1024,7 @@ while ( i<4){
 
 //Add all number from array using for loop
 let array = [1,2,3,4,5,6,7,8,9,10,11];
+
 let findSum = (numbers) => {
     // WRITE YOUR CODE HERE.
     let sum = 0;
@@ -1325,6 +1326,33 @@ for ( let i = 0; i < moons.length; i += 2 ){
 
 
 
+
+
+
+//using [ Arguments ] = it behaves like an array containing the argument 
+//you used to call the function. 
+function sumNum() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+
+console.log(sumNum(1, 2, 3, 4, 5, 6)); // Output: 21
+
+
+//You can aslo use [ ... ] for the parameters as well to resolve 
+
+let sumNumt = (...num) => {
+    let result = 0; 
+    for ( let i = 0; i < num.length; i++ ){
+        result += num[i]
+    }
+    return result; 
+}
+
+console.log(sumNumt(1, 2, 3, 4, 5, 6)); // Output: 21
 
 
 
@@ -1845,3 +1873,65 @@ function removeItem() {
         document.getElementById("itemList").removeChild(lastItem)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Methods = another name for a function that specifically for a function that are members of an object. 
+//we access them using [ THIS ] 
+
+let sayGreeting = function() {
+    console.log(this.sound + ", I am a " + this.kind);
+};
+
+let animal = {
+    kind: "Dragon",
+    sound: "RAARARAR!",
+    greet: sayGreeting,
+};
+
+animal.greet(); //this helps it find the location -.
+
+
+
+
+
+
+
+//OBject robot using methods 
+let robot = { 
+
+    speak: function(){
+        console.log("Hello")
+    },
+    
+    sleep: function(){
+        console.log("Good night!")
+    },
+
+    wakeUp: function(){
+        console.log("Good morning!")
+    },
+
+    work: function(){
+        console.log("Working...")
+    }
+
+};
+
+let startRobot = (robot) => {
+    robot.speak();  // Output: Hello
+    robot.sleep();  // Output: Good night!
+    robot.wakeUp(); // Output: Good morning!
+    robot.work();   // Output: Working...
+}
+startRobot(robot);
