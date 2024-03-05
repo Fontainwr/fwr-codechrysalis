@@ -375,6 +375,21 @@ console.log(findFilms("Star Wars"))
 
 
 
+//Math.random() = To create random number
+let randomBoolean = Math.random() < 0.5; 
+console.log(randomBoolean);
+//Math.floor(Math.random() ) = To create whole numbers 
+let num = Math.floor(Math.random() * 5  );
+console.log(num);
+
+
+//Using Math random for a complete code 
+let soups = ["Tomato", "Sour Cream", "Chicken Noodle"];
+let randomSoup = soups[Math.floor(Math.random() * soups.length)];
+console.log("The soup of the day is: " + randomSoup);
+
+
+
 
 
 
@@ -410,6 +425,38 @@ let restaurants = [
     };
 
 pickRandomRestaurant();
+
+
+
+
+
+//Using math.random to return random number dice 
+let dice = () => {
+    return Math.floor(Math.random() * 6 ) + 1;
+}
+console.log(dice());
+
+
+
+//Using math.random to return heas or tails
+let coinToss = () => {
+        if ( Math.floor(Math.random() < 0.5 )) {
+            return "Heads";
+        } else {
+            return "Tails"
+        }   
+};
+console.log(coinToss());
+
+
+
+//Using math.random to return -s rnadom array
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let pickRandom = (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+console.log(pickRandom(arr));
+
 
 
 
@@ -1935,3 +1982,84 @@ let startRobot = (robot) => {
     robot.work();   // Output: Working...
 }
 startRobot(robot);
+
+
+
+
+
+
+
+
+
+//function bank account using objects 
+let opneBankAccount = (name) => {
+    return {
+        name: name,
+        balance: 0
+    };
+}
+let account = opneBankAccount("Zeke");
+console.log(account)
+
+
+
+
+
+
+
+//function bank account using objects and function inside and accessing it 
+//via [ This ] 
+let opneBankAccount1 = (name) => {
+    return {
+        name: name,
+        balance: 0,
+        withdraw: function(num) {
+            this.balance -= num 
+        },
+        deposit: function(num) {
+            this.balance += num
+        },
+        checkStatus: function() {
+            console.log(`Hello ${this.name}, Your current balance is ${this.balance}`)
+        }
+    };
+}
+let account1 = opneBankAccount1("Zeke");
+console.log(account1.balance); // Expect 0
+
+account1.deposit(300);
+console.log(account1.balance); // Expect 300
+
+account1.withdraw(120);
+console.log(account1.balance); // Expect 180
+
+account1.checkStatus();
+
+
+
+
+
+
+
+//DOM using [ .addEventListener() ] using two areguments. 
+//1.) string tells DOM what event to look for 
+//2.) Function for the DOM to run when the even occurs
+
+let button = document.getElementById("push");
+let action = () => {
+    console.log("Hello World team")
+};
+button.addEventListener("click", action )
+
+
+//Another common use case of events is the window load event.
+//  This is used frequently because the browser can run the 
+//JavaScript first before the HTML file is fully loaded. 
+//If JavaScript tries to run DOM methods on elements that haven't 
+//been created yet, the JavaScript might not work.
+
+window.addEventListener("load", () => {
+    console.log("The HTML is now completely loaded in the browser.");
+});
+
+
