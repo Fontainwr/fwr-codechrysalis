@@ -628,6 +628,149 @@ console.log(distanceFromBeginning);
 
 
 
+
+//function return first character [ charAt(0)]
+let firstChar = (str) => {
+    if (str.length === 0 ) {
+        return " :)"
+    } else {
+        return str.charAt(0);
+    }
+}
+console.log(firstChar("The main time "));
+console.log(firstChar(""));
+
+
+
+
+
+
+//function takes array and swaps first and last items in array
+let swapEnds = (arr) => {
+    [arr[0], arr[arr.length - 1]] = [arr[arr.length -1 ], arr[0]]
+    return arr;
+}
+console.log(swapEnds([1, 2, 3, 4, 5])); // Output: [5, 2, 3, 4, 1]
+console.log(swapEnds(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
+console.log(swapEnds(['a']));
+
+
+
+
+
+//Takes a string longer than 100 characters using slice(,) + "..."
+let previewText = (text) => {
+    if( text.length > 100) {
+        return text.slice(0,15) + "..."
+    } else {
+        return text
+    }
+}
+
+console.log(previewText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")); // Output: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+console.log(previewText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in libero libero.")); // Output: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris in libero lib..."
+
+
+
+
+
+
+
+//Takes array of numbers and return an array of ojects using .map() and .includes 
+function sign(number) {
+    if (number > 0) {
+        return 1;
+    } else if (number < 0) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
+let numberInfo = (numr) => {
+    return numr.map(num => {
+        return {
+            value: num,
+            isPositive: sign(num) === 1,
+            isLucky: [7,8,13,42].includes(num)
+        }
+    })
+};
+console.log(numberInfo([5, -3, 8, 13, 0, 42])); 
+
+
+
+
+
+
+//function takes array of numbers and returns that sum of all positive 
+//that dont end in 5. 
+let pickySum = (arr) => {
+    let sum = 0; 
+    for ( let i = 0; i < arr.length; i++){
+        const num = arr[i];
+
+        if( num > 0 && num % 10 !== 5) {
+            sum += num ;
+        }
+    }
+    return sum;
+} 
+console.log(pickySum([-2, -1, 0, 1, 2, 3, 4, 5, 3572905925]));
+// returns 10 (because 1 + 2 + 3 + 4 is 10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//write a function takes a string and returns true if the string 
+// pass in is 1 character long and conatins a letter otherwise it returns 
+//false for all strings that don't fulfill both of those requriements
+//using [ .toUpperCase() ] and [ .toLowerCase ]. 
+
+let isLetter = (let) => {
+    return let.length === 1 && let.toUpperCase() !== let.toLowerCase();
+}
+
+console.log(isLetter('a')); // true
+console.log(isLetter('A')); // true
+console.log(isLetter('1')); // false
+console.log(isLetter('ab')); // false
+
+
+
+
+//Takes string and returns the first letter of the string 
+function isLetterAgain(char) {
+    return char.length === 1 && char.toUpperCase() !== char.toLowerCase();
+}
+
+let findFirstLetter = (str) => {
+    for ( let i = 0; i < str.length; i++) {
+        if ( isLetterAgain(str[i])){
+                return str[i]
+        }
+    }
+    return null
+};
+console.log(findFirstLetter("Thre ergwer fewfr "))
+
+
+
+
+
+
+
 //find distance and index from end 
 let string = "wkljkdfjkkdewr";
 let lastIndex = string.lastIndexOf("e"); 
