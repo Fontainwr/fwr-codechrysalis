@@ -2332,8 +2332,21 @@ window.addEventListener("load", () => {
 
 
 
+  //change background color using DOM 
+  <body>
+  </body>
 
+  window.addEventListener("load", () => {
+    function changeBackgroundColor() {
 
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    }
+    changeBackgroundColor();
 
+    document.addEventListener("mouseup", changeBackgroundColor );
+    document.addEventListener("mousedown", changeBackgroundColor );
+});
 
-  //
