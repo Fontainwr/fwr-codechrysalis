@@ -2350,3 +2350,151 @@ window.addEventListener("load", () => {
     document.addEventListener("mousedown", changeBackgroundColor );
 });
 
+
+
+
+
+
+//DOM to change the color and size of items 
+
+<body>
+    <div id="message">I am important.</div>
+    <button id="button">Make MORE important</button>
+</body>
+
+window.addEventListener("load", () => {
+    let message = document.getElementById("message");
+    let button = document.getElementById("button");
+    let clickCount = 0; 
+
+    button.addEventListener("click", () => {
+        let currentSize = window.getComputedStyle(message).getPropertyValue('font-size');
+        let newSize = parseFloat(currentSize) + 2;
+        message.style.fontSize = newSize + "pt";
+
+        const red = Math.floor(Math.random() * 256);
+        const blue = 0;
+        const green = 0;
+
+        message.style.color = `rgb(${red},${green},${blue})`;
+
+        clickCount++;
+
+        if (clickCount === 2){
+            document.body.style.backgroundColor = "yellow";
+        } else if (clickCount === 4) {
+            document.body.style.backgroundColor = "black";
+        } else if (clickCount === 8) {
+            document.body.style.backgroundColor = "green";
+        }
+
+        });
+    });
+
+
+
+
+
+
+
+
+
+    
+//Loops using timeouts //Count up and does not stop 
+let wakeUpCall = () => {
+    console.log("Wake up!")
+};
+let delay = 8 * 60 * 80 * 1000; 
+setTimeout(wakeUpCall, delay);
+
+
+//[setTimeout]
+let count = 0; 
+let countUp = () => {
+    console.log(count);
+    count++;
+    setTimeout(countUp, 100);
+}
+setTimeout(countUp,100)
+
+
+
+
+
+//Loop counts 1 to 10 using for or while loop 
+let counts = () => {
+
+    let count = 1;
+    while ( count <= 10){
+        console.log(count)
+        count++;
+    }
+};
+counts();
+
+
+
+
+
+//Prints hello every 5 seconds 
+let hello5 = () => {
+    console.log("Hello");
+};
+let delay = 500;
+setTimeout(hello5, delay);
+
+
+
+
+
+
+//Prints hello1, 2, 3
+let count = 1;
+
+function displayHello() {
+    if ( count <= 12)
+    console.log(`Hello ${count}`)
+    count++;
+    setTimeout(displayHello, 500);
+
+    if( count === 13){
+        console.log("Done!")
+    }
+}
+displayHello();
+
+
+
+
+
+
+
+//Function thats checks if array contains numbers or not. 
+function anyoneThere(arr){
+    if( arr.length === 0 ){
+        return false;
+    } else {
+        return true;
+    }
+}
+console.log(anyoneThere([1, 2, 3])); // true
+console.log(anyoneThere([])); // false
+
+
+
+
+
+
+
+//function returns third item array 
+
+function getThird(arr) {
+    if(arr.length >= 3 ) {
+        return arr[2];
+    }else {
+        return "Item not found!"
+    }
+};
+console.log(getThird(["corn", "tomato", "broccoli"])); // "broccoli"
+console.log(getThird(["cat", "elephant", "Tiger", "Wale"])); // "broccoli"
+console.log(getThird(["corn", "pineapple"])); // "No item found." 
