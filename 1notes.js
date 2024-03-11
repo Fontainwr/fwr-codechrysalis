@@ -2469,6 +2469,46 @@ displayHello();
 
 
 
+
+
+
+
+//using [setTimeout ]
+<div id="message">...Ready!.</div>
+
+
+window.addEventListener("load", () => {
+    let message = document.getElementById("message");
+    let button = document.getElementById("button");
+    
+        let counter = 0;
+    
+        let updateMessage = () => {
+        counter += 1;
+        message.innerText = counter + " and counting!";
+        setTimeout(updateMessage, delay);
+        };
+        let delay = 3000;
+        setTimeout(updateMessage, delay);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Function thats checks if array contains numbers or not. 
 function anyoneThere(arr){
     if( arr.length === 0 ){
@@ -2498,3 +2538,90 @@ function getThird(arr) {
 console.log(getThird(["corn", "tomato", "broccoli"])); // "broccoli"
 console.log(getThird(["cat", "elephant", "Tiger", "Wale"])); // "broccoli"
 console.log(getThird(["corn", "pineapple"])); // "No item found." 
+
+
+
+
+
+
+
+
+
+//re format functions 
+let double = (num) => {
+    return num * 2;
+};
+console.log(double(2));
+
+//or 
+let doubleAgin = (num) => num * 2; 
+console.log(double(2));
+
+
+
+
+
+
+
+
+//[ .map() ] = like Array.map(X) = Takes in a function that is able to 
+//convert one value into a new value. Creates a new array. Calls that function for every 
+//item in the array and pushes thse new items to the array. 
+
+//Example #1 = double numbers 
+let nums = [1,2,3,4,5,6,7,8,9];
+
+let double = (x) => {
+    return x * 2; 
+};
+
+let evenNums = nums.map(double);
+console.log(evenNums);
+
+
+
+
+//Example #2 = clear spaces 
+let string = ["  Hello","  How are you", " Take care "];
+
+let hedger = (arr) => {
+    return arr.trim("");
+};
+
+let newString = string.map(hedger);
+console.log(newString);
+
+
+
+//[ .filter() ] = It takes in a function and returns a new array.
+//the function should return a boolean. The new array, will keep 
+// the value if the boolean is true. 
+
+//Example #1 = return psotive numbers 
+let isPositive = num => {
+    return num > 0; 
+};
+
+let justPositive = (nums) => {
+    return nums.filter(isPositive);
+};
+console.log(justPositive([12,-12,34,-23,-231,23,4,-111,-42,423]));
+
+
+
+
+
+//function no blanks that takes array of string 
+//some of the string might be mpty (string that have length = 0)
+//Return a new array of string that doesn't contain any empty string 
+
+function noBlanks(arrayOfStrings) {
+    return arrayOfStrings.filter(str => str.length > 0);
+}
+
+// Example usage:
+let strings = ["", "Hello", "", "How are you", "", "Take care"];
+let nonEmptyStrings = noBlanks(strings);
+
+
+console.log(nonEmptyStrings); // Output: ["Hello", "How are you", "Take care"]
