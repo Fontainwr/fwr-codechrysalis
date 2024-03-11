@@ -2625,3 +2625,100 @@ let nonEmptyStrings = noBlanks(strings);
 
 
 console.log(nonEmptyStrings); // Output: ["Hello", "How are you", "Take care"]
+
+
+
+
+
+
+
+
+//[.filter to return positive numbers only ]
+let returnPositiveVibesOnly = (num) => {
+    return num > 0;
+}
+
+let finalPositiveVibes = (nums) => {
+    return nums.filter(returnPositiveVibesOnly)
+}
+console.log(finalPositiveVibes([-5, 3, -45, 28, -1000, 7]));
+// [3, 28, 7]
+
+
+
+
+
+
+//Takes a number and an array and removes all items from the array
+//that are greater than the number 
+
+
+
+let removeGreaterThan = (num, arr) => {
+    return arr <= num;
+}
+
+let getFinalRemove = (num, newarr) => {
+    return newarr.filter( n => removeGreaterThan(num, n ));
+}
+console.log(getFinalRemove(3, [1, 2, 3, 4, 5, 6]));
+// [1, 2, 3]
+
+console.log(getFinalRemove(5, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
+// [1, 2, 3, 4, 5]
+
+
+
+
+
+
+
+
+
+
+
+//Write a function called upCaseList that takes in an 
+//array of strings and converts each string to uppcase 
+
+let upcaseList = (arr) => {
+    return arr.map( word => word.toUpperCase());
+}
+
+
+console.log(upcaseList(["hey", "wake", "up"]));
+// ["HEY", "WAKE", "UP"]
+
+
+
+
+
+
+
+
+
+
+//Write a function square array of numbers 
+let squareList = (arr) => { 
+    return arr.map( num => num ** 2 )
+};
+console.log(squareList([1, 2, 3, 4]));
+// [1, 4, 9, 16]
+
+
+
+
+
+//Functuion removeEmpty array
+// values and removes all undefined values 
+
+let remove = (num) => {
+    if( num === undefined){
+        return false;
+    }
+    return true;
+}
+let removeEmpty = (arr) => {
+    return arr.filter( n => remove(n) )
+}
+console.log(removeEmpty([12, undefined, 37, 53, undefined, 0]));
+// [12, 37, 53, 0]
