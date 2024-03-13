@@ -2697,6 +2697,26 @@ console.log(upcaseList(["hey", "wake", "up"]));
 
 
 
+// function takes in an arrayof strings, return new longer than 8 
+
+let checkWords = (word) => {
+    return word.length >= 8;
+}
+let longWordsOnly = (arr) => {
+    return arr.filter( word=> checkWords(word))
+};
+console.log(longWordsOnly(["a", "be", "sea", "D", "eeeeeeeeee", "yodelaheehoo", "heeeeeeeee"]));
+// ["eeeeeeeeee", "yodelaheehoo", "heeeeeeeee"]
+
+
+
+
+
+
+
+
+
+
 //Write a function square array of numbers 
 let squareList = (arr) => { 
     return arr.map( num => num ** 2 )
@@ -2722,3 +2742,60 @@ let removeEmpty = (arr) => {
 }
 console.log(removeEmpty([12, undefined, 37, 53, undefined, 0]));
 // [12, 37, 53, 0]
+
+
+
+
+
+//[ review .map() and Filter ]
+//Write a function takes in an array string and returns
+//new array where all the words have upper case 
+
+let shout = (arr) =>{
+    return arr.map( word => word.toUpperCase())
+}
+console.log(shout(["a", "be", "sea", "D", "eeeeeeeeee", "yodelaheehoo", "heeeeeeeee"]));
+// "A", "BE", "SEA", "D", "EEEEEEEEEE", "YODELAHEEHOO", "HEEEEEEEEE"]
+
+
+
+
+
+
+//[ review .map() and Filter ]
+//return all uppcase for words longer than 7. 
+let yodel = (arr) => {
+    if( arr.length >= 7) {
+        return arr.map( word => word.toUpperCase());
+    } else {
+        return [];
+    }
+};
+console.log(yodel(["a", "be", "sea", "D", "eeeeeeeeee", "yodelaheehoo", "heeeeeeeee"]));
+// "EEEEEEEEEE", "YODELAHEEHOO", "HEEEEEEEEE"]
+
+
+
+
+
+
+//returns a copy of the string but with the following transformations applied:
+let obfuscate = (str) => {
+    return str.split("").map(char => {
+        if (char === 'A' || char === 'a') {
+            return '@';
+        } else if (char === 'E' || char === 'e') {
+            return '3';
+        } else if (char === 'I' || char === 'i') {
+            return '!';
+        } else if (char === 'O' || char === 'o') {
+            return '0';
+        } else if (char === 'S' || char === 's') {
+            return '5';
+        } else {
+            return char;
+        }
+    }).join("")
+
+};
+console.log(obfuscate("HELLO")); // H3LL0
