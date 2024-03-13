@@ -2799,3 +2799,183 @@ let obfuscate = (str) => {
 
 };
 console.log(obfuscate("HELLO")); // H3LL0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//returns string of every other letter
+let everyOther = (str) => {
+    return str.split("").filter((word, index) => index % 2 === 0).join("")
+}
+let letters = "abcdefghijklmnopqrstuvwxyz";
+console.log(everyOther(letters)); // acegikmoqsuwy
+
+
+//Has a string and returns new stitng where the casing of all 
+//letters has been swapped
+let swapCase = (str) => {
+    return str.split("").map((letter) => {
+        if( letter === letter.toUpperCase()){
+            return letter.toLowerCase();
+        } else if (letter == letter.toLowerCase()){
+            return letter.toUpperCase();
+        }
+    }).join("")
+}
+console.log(swapCase("abcxyz")); // ABCXYZ
+console.log(swapCase("LMNOP")); // lmnop
+console.log(swapCase("bBbBb")); // BbBbB
+console.log(swapCase("qrsTUV")); // QRStuv
+
+
+//Takes a number and returns a string of random letters with a 
+//length of that number 
+let createGibberish = (num) => {
+    let randomWords = "";
+    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    for (let i = 0; i < num; i++){
+        randomWords += letters.charAt(Math.floor(Math.random() * letters.length ));
+    }
+    return randomWords;
+}
+console.log(createGibberish(3)); // "QYV"
+console.log(createGibberish(7)); // "UPWXNLF"
+console.log(createGibberish(0)); // ""
+
+
+
+
+
+
+
+
+
+
+//Using [Closure] via the function within a funtion. This is when we use a variable that was declared in a 
+//scope above the function, but that function has ended. 
+//Example:
+let counterFactory = () => {
+    let count = 0; 
+    let countUp = () => {
+        count += 1;
+        return count; 
+    }
+    return countUp; 
+}
+let counterStart = counterFactory()
+console.log(counterStart())
+
+
+//Example #2 
+let greateGreeter = (name) => {
+    let message = "My name is " + name + "!";
+    return () => {
+        console.log(message);
+    };
+};
+let greeter = greateGreeter("JayDub");
+greeter();
+
+
+//Example #3 = Function takes value and returns a funtion that returns that value 
+let simpleStart = (num) => {
+    let count = 0;
+    let returnNum = () => {
+        return num;
+    }
+    return returnNum;
+};
+let foo = simpleStart(42);
+console.log(typeof foo); // function
+console.log(foo()); // 42
+console.log(foo()); // 42
+console.log(foo()); // 42
+
+
+
+
+
+
+
+//exmaple #4 = Functon that takes in a string and returns function that 
+//returns that string. However, each time the string gets shorter.
+
+let slowSilencer = (str) => {
+    let greeting = () => {
+        if( str.length === 0) {
+            return "";
+        }else {
+            str = str.slice(0, -1);
+            return str;
+        }
+    }
+    return greeting;
+};
+
+let speak = slowSilencer("Greetings!");
+console.log(speak()); // Greetings
+console.log(speak()); // Greeting
+console.log(speak()); // Greetin
+console.log(speak()); // Greeti
+console.log(speak()); // Greet
+console.log(speak()); // Gree
+console.log(speak()); // Gre
+console.log(speak()); // Gr
+console.log(speak()); // G
+
+
+
+
+
+
+
+
+//function that check is the character is the same as the string's first letter. 
+let checkFirstLetter = (str, index) => {
+    return str.charAt(0) === index; 
+}
+console.log(checkFirstLetter("Marie", "M")); // true
+console.log(checkFirstLetter("Marie", "m")); // false
+console.log(checkFirstLetter("Ken", "P")); // false
+
+
+
+
+
+//Takes two numbers and if the numbers added together are greater than
+//or equal to 10, return true and otherwise false
+let toTenAndBeyond = (num1, num2) => {
+    if ( num1 + num2 >= 10) {
+        return true;
+    } else {
+        return false; 
+    }
+};
+console.log(toTenAndBeyond(1, 2)); // false
+console.log(toTenAndBeyond(8, 9)); // true
+
+//OR!!!!!!!!!!!!!!!!!!!!!
+
+let a = (num1, num2) => {
+    return [num1, num2].map( num => num + num >= 10).includes(true);
+};
+console.log(a(1, 2)); // false
+console.log(a(8, 9)); // true
+
+
+
+
+
+
+

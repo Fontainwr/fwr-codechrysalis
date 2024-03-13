@@ -1,6 +1,2 @@
-//Feburary 14th, 
+//Feburary 15th, 
 
-
-let everyOther = (str) => {
-    return str.filter( letter => )
-}
