@@ -1,24 +1,20 @@
-
-let totalCount = parseInt(localStorage.getItem("totalCount")) || 0;
-
 window.addEventListener("load", () => {
-    let button = document.getElementById("the-button");
-    let counterElement = document.getElementById("the-counter");
-    let resetButton = document.getElementById("reset-button");
-    
-    button.addEventListener("click", () => {
-        totalCount += 1;
-        counterElement.innerText = totalCount;
+    console.log("The page is loaded! It is now safe to access the DOM.");
 
-        localStorage.setItem("totalCount", totalCount.toString())
-    }); 
 
-    resetButton.addEventListener("click", () => {
-        totalCount -= 1;
-        counterElement.innerText = totalCount;
-        localStorage.setItem("totalCount", totalCount.toString())
-    })
+    function countToX(num) {
+        let countMain = document.querySelector(".main p");
+        let counter = 1;
 
-    counterElement.innerText = totalCount;
+        function updateCounter() {
+            if(counter <= num) {
+                countMain.innerText = counter + ": Visitors";
+                counter +=1;
+            }else {
+                clearInterval(intervalId);
+            }
+        }
+            let intervalId = setInterval(updateCounter, 300);
+        }
+        countToX(12);
 });
-
