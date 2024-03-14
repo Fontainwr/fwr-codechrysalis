@@ -3,10 +3,10 @@
 
 
 function countToX(num) {
-    let counter = 1;
+    let counter = 1; 
     while ( counter <= num ) {
-        console.log(counter)
-        counter += 1;
+        console.log(counter);
+        counter += 1; 
     }
 }
 countToX(12);
