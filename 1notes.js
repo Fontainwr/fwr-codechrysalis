@@ -2979,3 +2979,119 @@ console.log(a(8, 9)); // true
 
 
 
+
+//function takes string and string represents some code. 
+//function returns true if the string contains the word "while". 
+let javascriptPossiblyRunsForever = (str) => {
+    return str.includes("while")
+};
+let badCode = "let condition = true; while (condition) { console.log('hi'); }";
+console.log(javascriptPossiblyRunsForever(badCode)); // true
+
+let goodCode = "for (let i = 0; i < 10; i++) { console.log('hi'); }";
+console.log(javascriptPossiblyRunsForever(goodCode)); // false
+
+
+
+
+
+
+
+//[ Local Storage ] = saves data For notmal javascript object permanently. Must be a "string".
+//1.) using --> localStorage.setItem('numbers', numbersArrayString);
+//2.) retrieve --> let X = parseInt(localStorage.getItem('X')) || 0;
+
+
+
+//Example 
+// Set a value in localStorage
+localStorage.setItem('username', 'John');
+
+// Get a value from localStorage
+const storedUsername = localStorage.getItem('username');
+console.log(storedUsername); // Output: John
+
+// Update a value in localStorage
+localStorage.setItem('username', 'Jane');
+const updatedUsername = localStorage.getItem('username');
+console.log(updatedUsername); // Output: Jane
+
+// Remove a value from localStorage
+localStorage.removeItem('username');
+
+// Check if a value exists in localStorage
+const isUsernameStored = localStorage.getItem('username') !== null;
+console.log(isUsernameStored); // Output: false
+
+
+
+
+//Storing an array of numbers using Local Storage 
+// Define an array of numbers
+const numbersArray = [1, 2, 3, 4, 5];
+
+// Convert the array to a string using JSON.stringify
+const numbersArrayString = JSON.stringify(numbersArray);
+
+// Store the stringified array in localStorage under a key
+localStorage.setItem('numbers', numbersArrayString);
+
+// Retrieve the stringified array from localStorage
+const storedNumbersArrayString = localStorage.getItem('numbers');
+
+// Convert the string back to an array using JSON.parse
+const storedNumbersArray = JSON.parse(storedNumbersArrayString);
+
+// Log the retrieved array
+console.log(storedNumbersArray);
+
+
+
+
+
+
+//[ convert ] Convert strings into numbers 
+// Using parseInt
+const strToInt = "42";
+const intNumber = parseInt(strToInt);
+console.log(intNumber); // Output: 42
+
+// Using parseFloat
+const strToFloat = "3.14";
+const floatNumber = parseFloat(strToFloat);
+console.log(floatNumber); // Output: 3.14
+
+
+
+//Example [local storage ]
+
+<body>
+  <div>I have been clicked <span id="the-counter">0</span> time(s).</div>
+  <button id="the-button">ADD!</button>
+  <button id="reset-button">Restore</button>
+</body>
+
+let totalCount = parseInt(localStorage.getItem("totalCount")) || 0;
+
+window.addEventListener("load", () => {
+    let button = document.getElementById("the-button");
+    let counterElement = document.getElementById("the-counter");
+    let resetButton = document.getElementById("reset-button");
+    
+    button.addEventListener("click", () => {
+        totalCount += 1;
+        counterElement.innerText = totalCount;
+
+        localStorage.setItem("totalCount", totalCount.toString())
+    }); 
+
+    resetButton.addEventListener("click", () => {
+        totalCount -= 1;
+        counterElement.innerText = totalCount;
+        localStorage.setItem("totalCount", totalCount.toString())
+    })
+
+    counterElement.innerText = totalCount;
+});
+
+
