@@ -3095,3 +3095,91 @@ window.addEventListener("load", () => {
 });
 
 
+
+
+
+
+
+//takes string and returns if it stars with [ "Hi"]
+let startWithHi = (str) => {
+    // return str.startsWith("Hi")
+    //OR
+    const words = str.split(" ");
+    return words.map( word => word.slice(0,2) === "Hi").includes(true); 
+
+}
+console.log(startWithHi("Hello")); // false
+console.log(startWithHi("Hi there")); // true
+console.log(startWithHi("Hiccup")); // true
+
+
+
+
+
+
+
+let startWithHi = (str) => {
+    const words = str.split(" ");
+    return words.map( letter => letter.slice(0,2) === "Hi").includes(true)
+};
+console.log(startWithHi("Hello")); // false
+console.log(startWithHi("Hi there")); // true
+console.log(startWithHi("Hiccup")); // true
+
+
+
+//count 2's in an array 
+let countTwos = (arr) => {
+    let count = 0;
+    arr.filter( num => {
+        if( num === 2){
+            count++
+        }
+    })
+    return count; 
+};
+console.log(countTwos([1, 2, 9])); // 1
+console.log(countTwos([1, 2, 2, 3, 2])); // 3
+
+
+//Takes stringand returns true if ends in "ing", false otherise 
+
+let geroundDetector = (str) => {
+    const checker = str.split(" ")
+    return checker.map( end => end.slice(-3) === "ing").includes(true);
+};
+console.log(geroundDetector("running")); // true
+console.log(geroundDetector("swimmingly")); // false
+console.log(geroundDetector("tomato")); // false
+console.log(geroundDetector("ring")); // true
+
+
+
+
+
+//Takes string and number and returns new string with last character 
+//repeated that number of times 
+//last character - .repeat number - return str + repeat character 
+let addEcho = (str, num) => {
+    const lastCharacter = str.slice(-1);
+    const final= lastCharacter.repeat(num);
+    return str + final;
+};
+console.log(addEcho("Hello", 4)); // "Helloooo"
+console.log(addEcho("Cat", 3)); // "Cattt"
+
+
+
+
+
+//Takes in a string and returns true if the second and third characters are 
+// both "O".OtherWise return false. 
+
+let rootyTootyFreshAndFrooty = (str) => {
+    const words = str.split(" ");
+    return words.map( letter => letter.slice(1,3) === "oo").includes(true)
+}
+console.log(rootyTootyFreshAndFrooty("Good")); // true
+console.log(rootyTootyFreshAndFrooty("Oops")); // false
+console.log(rootyTootyFreshAndFrooty("Dog")); // false
+console.log(rootyTootyFreshAndFrooty("Ooooh")); // true

@@ -1,12 +1,13 @@
 //Feburary 15th, 
 
-    //result, loop, push, resturn 
+// [ .map ] = New item
+// [ .filter ] = check 
+// [ .slice(x,y)] = greg a character  
+// [ .split("")] = organize via space 
+// [ .includes ] = includes item  
+// [startsWith ] = begins with 
+// [ .repeat] = Repeats 
+// convertts number to a string!!! --> let str = number + "";
 
-function countToX(num) {
-    let result = []
-    for (let i = 1; i <= num; i++){
-        result.push(i);
-    }
-    return result;
-}
-console.log(countToX(12));
+
+
