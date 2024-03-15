@@ -8,6 +8,8 @@
 // [startsWith ] = begins with 
 // [ .repeat] = Repeats 
 // convertts number to a string!!! --> let str = number + "";
+// [ Math.floor(Math.random())] = random number 
+
 
 
 
