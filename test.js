@@ -1,12 +1,12 @@
 //Feburary 15th, 
 
-
+    //result, loop, push, resturn 
 
 function countToX(num) {
-    let counter = 1; 
-    while ( counter <= num ) {
-        console.log(counter);
-        counter += 1; 
+    let result = []
+    for (let i = 1; i <= num; i++){
+        result.push(i);
     }
+    return result;
 }
-countToX(12);
+console.log(countToX(12));

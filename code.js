@@ -2,19 +2,14 @@ window.addEventListener("load", () => {
     console.log("The page is loaded! It is now safe to access the DOM.");
 
 
-    function countToX(num) {
-        let countMain = document.querySelector(".main p");
-        let counter = 1;
 
-        function updateCounter() {
-            if(counter <= num) {
-                countMain.innerText = counter + ": Visitors";
-                counter +=1;
-            }else {
-                clearInterval(intervalId);
-            }
+    function countToX(num) {
+        let result = [];
+        for (let i = 1; i <= num; i++) {
+          result.push(i);
         }
-            let intervalId = setInterval(updateCounter, 300);
-        }
-        countToX(12);
+        return result;
+      }
+      
+      console.log(countToX(5)); // [1, 2, 3, 4, 5]
 });
