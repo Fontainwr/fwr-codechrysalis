@@ -3183,3 +3183,6 @@ console.log(rootyTootyFreshAndFrooty("Good")); // true
 console.log(rootyTootyFreshAndFrooty("Oops")); // false
 console.log(rootyTootyFreshAndFrooty("Dog")); // false
 console.log(rootyTootyFreshAndFrooty("Ooooh")); // true
+
+
+
