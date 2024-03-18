@@ -9,18 +9,8 @@
 // [ .repeat] = Repeats 
 // convertts number to a string!!! --> let str = number + "";
 // [ Math.floor(Math.random())] = random number 
+//[ empty ] = return str.split("").filter( space => space !== " ").join("") 
 
 
-
-let sortingMachine = (arr) => {
-    let nums = [];
-    let bools = [];
-    let str = [];
-
-    arr.filter( item => {
-        if(typeof item === "number"){
-            nums.push(item)
-        }
-    })
-};
-console.log(sortingMachine([1, true, 5, "hello", -2, false, "goodbye"]));
+//#7 --> #2 
+console.log(onlyPositiveVibes([1, -5, 2, 7, -4, 12])); // returns [1, 2, 7, 12]
