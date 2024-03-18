@@ -12,4 +12,15 @@
 
 
 
+let sortingMachine = (arr) => {
+    let nums = [];
+    let bools = [];
+    let str = [];
 
+    arr.filter( item => {
+        if(typeof item === "number"){
+            nums.push(item)
+        }
+    })
+};
+console.log(sortingMachine([1, true, 5, "hello", -2, false, "goodbye"]));
