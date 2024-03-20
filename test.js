@@ -9,6 +9,7 @@
 // [ .repeat()] = Repeats 
 // [ .reduce()] = Iterate over each number in array for sum -> e((A,B) => {..}, 0);
 // [ .push()] = Into a new box 
+// [ .charAt() ] = Select the character at a position.  
 // [ switch arr spots ] =   [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]];
 // [ converts ] -> number to a string!!! --> let str = number + "";
 // [ Math.sign()] = Check weather a number is positive or zero -> Math.sign(number) === 1,
@@ -20,8 +21,4 @@
 // [ square number ] = number ** 2
 /////////////////////////////////////////////////////////////////////////
 
-
-//5---4 
-
-removeEmpty([12, undefined, 37, 53, undefined, 0]);
-// [12, 37, 53, 0]
+//#6
