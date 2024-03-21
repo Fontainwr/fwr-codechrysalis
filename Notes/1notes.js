@@ -2855,7 +2855,11 @@ console.log(createGibberish(0)); // ""
 
 
 
-
+let randomLetters = Array.from({ length: num }, () =>
+ letters.charAt(Math.floor(Math.random() * letters.length)));
+    
+// Join the array to form a string
+return randomLetters.join('');
 
 
 
