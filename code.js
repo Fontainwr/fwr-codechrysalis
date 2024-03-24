@@ -1,9 +1,14 @@
 window.addEventListener("load", () => {
-
+    
     let button = document.querySelector("#add-thing");
-    let paragrap = document.createElement
+    let counter = 1;
 
     button.addEventListener("click", () => {
-        console.log("Hello!")
+        let say = document.createElement("p");
+        say.innerText = "Hello Team #" + counter + "!";
+        counter++;
+    
+        let container = document.querySelector("#a-div-tag");
+        container.append(say);
     });
 });
