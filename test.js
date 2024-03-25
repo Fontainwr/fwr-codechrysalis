@@ -70,50 +70,88 @@
 // }
 // console.log(createGibberish(3)); // "QYV"
 //
+//
+//
+//
+//
+//
+//let runners = [
+    // {
+    //     name: "Sam",
+    //     seconds: 1322.728
+    // },
+//
+//
+// // Function to calculate average time of all runners
+// function averageTime(runners) {
+//     let totalSeconds = runners.reduce((sum, runner) => sum + parseFloat(runner.seconds), 0);
+//     return totalSeconds / runners.length;
+// }
+
+// // Function to find the winner (runner with the lowest time)
+// function findWinner(runners) {
+//     let winner = runners.reduce((prev, current) => (parseFloat(prev.seconds) < parseFloat(current.seconds)) ? prev : current);
+//     return winner.name;
+// }
+
+// // Function to calculate total time of the race (time taken by the slowest runner)
+// function totalTimeForRace(runners) {
+//     let totalTime = Math.max(...runners.map(runner => parseFloat(runner.seconds)));
+//     return totalTime;
+// }
+//
+//
+//
+//
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
-// [ .map() ] = Creates a new array
-// [ .filter() ] = Create new array and checks 
-// [ .push() ] = push into main item. 
-// [ .slice(x,y) ] = get characters or range 
-// [ .split("") ] = organize via space....You may need to [ .join("") ] it back 
-// [ .includes() ] = check if includes item : for numbers .toString().includes("X")
-// [ .startsWith() ] = Cehcks what begins with X
+// [ .abs() ] = check distance to a number = Math.abs(num1 - 10);
+// [ .charAt() ] = Select the character at a position.
+// [ .concat ] = To repeate string again
 // [ .endsWith() ] = Cehcks what begins with X
-// [ .repeat() ] = Returns a new string which contains the specified item (X) amount of times 
-// [ .reduce() ] = Iterate over each number in array for sum -> e((A,B) => {..}, 0);
-// [ .push() ] = Into a new box 
-// [ .charAt() ] = Select the character at a position.  
-// [ Math.sign() ] = Check weather a number is positive or zero -> Math.sign(number) === 1,
-// [ Math.floor(Math.random()) ] = random number.
-// [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
-// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse();
+// [ .filter() ] = Create new array and checks
 // [ .find ] == find the element you need. arr.find(element => element > 10);
-// [ check KEy, object ] = (key, obj) --- if (key.hasOwnProperty(obj) --- return key[obj]
+// [ .floor(Math.random()) ] = random number.
+// [ .includes() ] = check if includes item : for numbers .toString().includes("X")
+// [ .map() ] = Creates a new array
+// [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
+// [ Math.floor(Math.random()) ] = random number.
+// [ Math.sign() ] = Check weather a number is positive or zero -> Math.sign(number) === 1,
+// [ .push() ] = Into a new box
+// [ .push() ] = push into main item.
+// [ .reduce() ] = Iterate over each number in array for sum -> e((sum,num) => { A + B}, 0);
+// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse();
+// [ /[a-z].test(X)] = Test regex if true based on info code. 
+// [ .slice(x,y) ] = get characters or range ---> or cur one item = X.slice(2)
+// [ .split("") ] = organize via space....You may need to [ .join("") ] it back
+// [ .startsWith() ] = Cehcks what begins with X
 //============================================================================================
-// [ switch arr spots ] =   [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]];
-// [ Loop ] =  ( let i = 1; i <= X ; i++ ) // or //  ( let i = 1; i <= X.length; i++ ) 
 // [ converts ] -> number to a string!!! --> let str = number + "";
-// [ Random number ] = const X = max => Mathflor(MathRan() * max) + 1 = return x(num)
-// [ remove Spaces  ] = return str.split("").filter( space => space !== " ").join("") 
-// [ for of loop ] =  (let X of str) = checking lists in array
-// [ return conditions  ] = X.length > 0 ? X : false; ---> condition ? expression1 : expression2
-// [ square number ] = number ** 2
-// [ to retrive character ] = X[1][0] = "Second" character and "First" character. 
+// [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
+// [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
+// [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
+// [ Random number ] = const X = max => Mathflor(MathRan() * max) + 1 = return x(num)
+// [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
+// [ return conditions ] = X.length > 0 ? X : false; ---> condition ? expression1 : expression2
+// [ square number ] = number ** 2
+// [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]];
+// [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-
-let sometimesSum = (num1, num2) => {
-    let result = num1 + num2;
-    if( result >= 10 && result <= 20) {
-        return "Forbidden number"
+// console.log()
+let isLetter = (str) => {
+    if ( str.length === 1 && typeof str === "string"){
+        return /[a-zA-Z]/.test(str);
     } else {
-        return result; 
+        return false; 
     }
 }
 
-console.log(sometimesSum(1, 2)); // 3
-console.log(sometimesSum(15, 2)); // Forbidden number
-console.log(sometimesSum(20, 1)); // 21
+console.log(isLetter("H"));    // Output: true
+console.log(isLetter("9"));    // Output: false
+console.log(isLetter("A"));    // Output: true
+console.log(isLetter(""));     // Output: false
+console.log(isLetter("AB"));   // Output: false

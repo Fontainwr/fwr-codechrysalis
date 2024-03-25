@@ -691,7 +691,7 @@ let numberInfo = (numr) => {
     return numr.map(num => {
         return {
             value: num,
-            isPositive: sign(num) === 1,
+            isPositive: Math.sign(num) === 1,
             isLucky: [7,8,13,42].includes(num)
         }
     })
