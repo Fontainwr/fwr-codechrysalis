@@ -21,8 +21,9 @@
 
 //     counterElement.innerText = totalCount;
 // });
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
 // [ Function to Function ]
 //=====================================
 // let enumerate = (num, funct) => {
@@ -36,11 +37,10 @@
 //     return numT * numT; 
 // }
 // console.log(enumerate(5, square)); // Output: [1, 4, 9, 16, 25]
-//
-//
-//
-//
-// [ Function Every other letter post ] 
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+// [ Log ever other letter  ] 
 //========================================
 // let letters = "abcdefghijklmnopqrstuvwxyz";
 // let everyOther = (str) => {
@@ -53,10 +53,9 @@
 //     }).join("")
 // }
 // console.log(everyOther(letters)); // acegikmoqsuwy
-//
-//
-//
-//
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
 // [  random letters length of number ]
 //=============================================
 // let createGibberish = (num) => {
@@ -69,41 +68,29 @@
 //     return result;
 // }
 // console.log(createGibberish(3)); // "QYV"
-//
-//
-//
-//
-//
-//
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
 //let runners = [
     // {
     //     name: "Sam",
     //     seconds: 1322.728
     // },
-//
-//
 // // Function to calculate average time of all runners
-// function averageTime(runners) {
+// =======================================================================================
 //     let totalSeconds = runners.reduce((sum, runner) => sum + parseFloat(runner.seconds), 0);
 //     return totalSeconds / runners.length;
-// }
-
+//
+//
 // // Function to find the winner (runner with the lowest time)
-// function findWinner(runners) {
+// =======================================================================================
 //     let winner = runners.reduce((prev, current) => (parseFloat(prev.seconds) < parseFloat(current.seconds)) ? prev : current);
 //     return winner.name;
-// }
 
-// // Function to calculate total time of the race (time taken by the slowest runner)
-// function totalTimeForRace(runners) {
+// // Function to calculate total time of Something  (time taken by the slowest runner)
+// =======================================================================================
 //     let totalTime = Math.max(...runners.map(runner => parseFloat(runner.seconds)));
 //     return totalTime;
-// }
-//
-//
-//
-//
-//
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -112,7 +99,7 @@
 // [ .concat ] = To repeate string again
 // [ .endsWith() ] = Cehcks what begins with X
 // [ .filter() ] = Create new array and checks
-// [ .find ] == find the element you need. arr.find(element => element > 10);
+// [ .find(X, index) ] = find the element you need --> [ arr.find(element => element > 10) ];
 // [ .floor(Math.random()) ] = random number.
 // [ .includes() ] = check if includes item : for numbers .toString().includes("X")
 // [ .map() ] = Creates a new array
@@ -128,7 +115,7 @@
 // [ /[a-z].test(X)] = Test regex if true based on info code. 
 // [ .slice(x,y) ] = get characters or range ---> or cur one item = X.slice(2)
 // [ .split("") ] = organize via space....You may need to [ .join("") ] it back
-// [ .startsWith() ] = Cehcks what begins with X
+// [ .startsWith("") ] = Cehcks what begins with X
 // [ Typeof ] = Check type of item ---> typeof str.charAt(0) === "string"
 //============================================================================================
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
@@ -137,17 +124,11 @@
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ Random Number ] = return Math.floor(Math.random() * num) + 1;
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
-// [ remove Item in arr] = return X.map( A => A !== undefined ? A : null ).filter( Done => Done !== null)
+// [ remove Item] = return X.map( A => A.length !== undefined ? A.length : null ).filter( Done => Done !== null)
 // [ square number ] = arr.map(num => num ** 2).filter(result => result);
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]];
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // console.log()
-
-let removeEmpty = (arr) => {
-    return arr.map( check => check !== undefined ? check : null).filter( result => result !== null )
-}
-
-console.log(removeOdd([1, 2, 3, 4, 5, 6]));
-// [2, 4, 6]
+//#7 
