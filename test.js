@@ -49,7 +49,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // [ .abs() ] = check distance to a number = Math.abs(num1 - 10);
 // [ .charAt() ] = Select the character at a position.
-// [ .concat ] = To repeate string again
+// [ .concat() ] = To repeate string again
 // [ .endsWith() ] = Cehcks what begins with X
 // [ .filter() ] = Create new array and checks
 // [ .find(X, index) ] = find the element you need --> [ arr.find(element => element > 10) ];
@@ -64,8 +64,9 @@
 // [ .push() ] = push into main item.
 // [ .toString ] =  Converts str into number -->  return num.toString().includes('0');
 // [ parseInt()] =  Convert boolean result back to number ->   return parseInt(num.toString().includes('0'))
-// [ .reduce() ] = Iterate over each number in array for sum -> e((sum,num) => { A + B}, 0);
+// [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0);
 // [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse();
+// [ .repeat()] = Repeat a something X amount of times 
 // [ /[a-z].test(X)] = Test regex if true based on info code. 
 // [ .slice(x,y) ] = get characters or range ---> or cur one item = X.slice(2)
 // [ .split("") ] = organize via space....You may need to [ .join("") ] it back
@@ -91,9 +92,10 @@
 
 // console.log()
 
-let addEcho = (str,num) => {
+
+let rightDownTheMiddle = (arr) => {
     
 }
 
-console.log(addEcho("Hello", 4)); // "Helloooo"
-console.log(addEcho("Cat", 3)); // "Cattt"
+console.log(rightDownTheMiddle([[1,2,3],[4,5,6],[7,8,9]]));
+// [2, 5, 8]
