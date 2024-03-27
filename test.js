@@ -24,53 +24,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
-// [ Function to Function ]
-//=====================================
-// let enumerate = (num, funct) => {
-//     let result = [];
-//     for ( let i = 1; i <= num; i++){
-//         result.push(funct(i))
-//     }
-//     return result 
-// };
-// function square(numT) {
-//     return numT * numT; 
-// }
-// console.log(enumerate(5, square)); // Output: [1, 4, 9, 16, 25]
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-// [ Log ever other letter  ] 
-//========================================
-// let letters = "abcdefghijklmnopqrstuvwxyz";
-// let everyOther = (str) => {
-//     return str.split("").map((word, index) => {
-//         if ( index % 2 === 0 ){
-//             return word;
-//         } else {
-//             return "";
-//         }
-//     }).join("")
-// }
-// console.log(everyOther(letters)); // acegikmoqsuwy
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-// [  random letters length of number ]
-//=============================================
-// let createGibberish = (num) => {
-//     let result = ""
-//     let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-//     for ( let i = 0; i < num; i++){
-//         result += (letters.charAt(Math.floor(Math.random() * letters.length)) )
-//     };
-//     return result;
-// }
-// console.log(createGibberish(3)); // "QYV"
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
 //let runners = [
     // {
     //     name: "Sam",
@@ -104,8 +57,9 @@
 // [ .includes() ] = check if includes item : for numbers .toString().includes("X")
 // [ .map() ] = Creates a new array
 // [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
-// [ Math.floor(Math.random()) ] = random number.
+// [ Math.floor(Math.random()) ] = random number ----> letters[Math.floor(Math.random()
 // [ Math.sign() ] = Check weather a number is positive or zero -> Math.sign(number) === 1,
+// [ Math.round() ] = returns the value of a number rounded to the nearest integer.
 // [ .push() ] = Into a new box
 // [ .push() ] = push into main item.
 // [ .toString ] =  Converts str into number -->  return num.toString().includes('0');
@@ -118,10 +72,15 @@
 // [ .startsWith("") ] = Cehcks what begins with X
 // [ Typeof ] = Check type of item ---> typeof str.charAt(0) === "string"
 //============================================================================================
+// [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
+// [ check last - numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)
+// [ convert arr to obj ] = for (let i = 0; i < arr.length; i += 2)..const key = arr[i]..const value = arr[i + 1];..obj[key] = value
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
+// [ return Object ] = Return obj[key]
+// [ Random to letters ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
 // [ Random Number ] = return Math.floor(Math.random() * num) + 1;
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
 // [ remove Item] = return X.map( A => A.length !== undefined ? A.length : null ).filter( Done => Done !== null)
@@ -131,4 +90,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // console.log()
-//#7 
+
+let addEcho = (str,num) => {
+    
+}
+
+console.log(addEcho("Hello", 4)); // "Helloooo"
+console.log(addEcho("Cat", 3)); // "Cattt"
