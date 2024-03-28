@@ -54,6 +54,7 @@
 // [ .filter() ] = Create new array and checks
 // [ .find(X, index) ] = find the element you need --> [ arr.find(element => element > 10) ];
 // [ .floor(Math.random()) ] = random number.
+// [ .forEach()] =  iterate over elements of an array 
 // [ .includes() ] = check if includes item : for numbers .toString().includes("X")
 // [ .map() ] = Creates a new array
 // [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
@@ -74,6 +75,7 @@
 // [ Typeof ] = Check type of item ---> typeof str.charAt(0) === "string"
 //============================================================================================
 // [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
+// [count up ] =  for (let i = 1; i <= arr; i++) ---> count.push(i)
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
 // [ check last - numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)
 // [ convert arr to obj ] = for (let i = 0; i < arr.length; i += 2)..const key = arr[i]..const value = arr[i + 1];..obj[key] = value
@@ -81,21 +83,14 @@
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ return Object ] = Return obj[key]
+// [ make arr -> obj ] =  let obj = {value: num, ...}; return obj
 // [ Random to letters ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
 // [ Random Number ] = return Math.floor(Math.random() * num) + 1;
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
 // [ remove Item] = return X.map( A => A.length !== undefined ? A.length : null ).filter( Done => Done !== null)
 // [ square number ] = arr.map(num => num ** 2).filter(result => result);
-// [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]];
+// [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-// console.log()
-
-
-let rightDownTheMiddle = (arr) => {
-    
-}
-
-console.log(rightDownTheMiddle([[1,2,3],[4,5,6],[7,8,9]]));
-// [2, 5, 8]
+// #2/#5
