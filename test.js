@@ -54,7 +54,7 @@
 // [ .filter() ] = Create new array and checks
 // [ .find(X, index) ] = find the element you need --> [ arr.find(element => element > 10) ];
 // [ .floor(Math.random()) ] = random number.
-// [ .forEach()] =  iterate over elements of an array 
+// [ .forEach()] =  iterate over  array --> arr.forEach(word => if(){console.log}
 // [ .includes() ] = check if includes item : for numbers .toString().includes("X")
 // [ .map() ] = Creates a new array
 // [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
@@ -70,12 +70,13 @@
 // [ .repeat()] = Repeat a something X amount of times 
 // [ /[a-z].test(X)] = Test regex if true based on info code. 
 // [ .slice(x,y) ] = get characters or range ---> or cur one item = X.slice(2)
+// [ .sice(X)] = Remove character.
 // [ .split("") ] = organize via space....You may need to [ .join("") ] it back
 // [ .startsWith("") ] = Cehcks what begins with X
 // [ Typeof ] = Check type of item ---> typeof str.charAt(0) === "string"
 //============================================================================================
 // [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
-// [count up ] =  for (let i = 1; i <= arr; i++) ---> count.push(i)
+// [ count up ] =  for (let i = 1; i <= arr; i++) ---> count.push(i)
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
 // [ check last - numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)
 // [ convert arr to obj ] = for (let i = 0; i < arr.length; i += 2)..const key = arr[i]..const value = arr[i + 1];..obj[key] = value
@@ -93,4 +94,18 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-// #2/#5
+// [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0);
+// [ .toString ] =  Converts str into number -->  return num.toString().includes('0');
+
+
+let isLetter = (str) => {
+    if ( str.length === 1 && typeof str === "string"){
+        return true;
+    } else {
+        return false; 
+    }
+};
+
+console.log(isLetter("A"));
+console.log(isLetter("Afg"));
+console.log(isLetter(""))
