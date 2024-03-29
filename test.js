@@ -56,7 +56,7 @@
 // [ .floor(Math.random()) ] = random number.
 // [ .forEach()] =  iterate over  array --> arr.forEach(word => if(){console.log}
 // [ .includes() ] = check if includes item : for numbers .toString().includes("X")
-// [ .map() ] = Creates a new array
+// [ .map() ] = Creates a new array -->  arr.map(set => set ).filter( num => num > 0);
 // [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
 // [ Math.floor(Math.random()) ] = random number ----> letters[Math.floor(Math.random()
 // [ Math.sign() ] = Check weather a number is positive or zero -> Math.sign(number) === 1,
@@ -94,18 +94,10 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-// [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0);
-// [ .toString ] =  Converts str into number -->  return num.toString().includes('0');
 
+let getRandomInteger = (num1,num2) => {
+    return Math.floor(Math.random() * num1.length / num2.length + 1);
+}
 
-let isLetter = (str) => {
-    if ( str.length === 1 && typeof str === "string"){
-        return true;
-    } else {
-        return false; 
-    }
-};
-
-console.log(isLetter("A"));
-console.log(isLetter("Afg"));
-console.log(isLetter(""))
+console.log(getRandomInteger(7,12)); // 
+console.log(getRandomInteger(71,99)); // 
