@@ -88,16 +88,10 @@
 // [ Random to letters ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
 // [ Random Number ] = return Math.floor(Math.random() * num) + 1;
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
-// [ remove Item] = return X.map( A => A.length !== undefined ? A.length : null ).filter( Done => Done !== null)
+// [ remove Item] = return X.map( A => A !== undefined ? A : null ).filter( Done => Done !== null)
 // [ square number ] = arr.map(num => num ** 2).filter(result => result);
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-
-let getRandomInteger = (num1,num2) => {
-    return Math.floor(Math.random() * num1.length / num2.length + 1);
-}
-
-console.log(getRandomInteger(7,12)); // 
-console.log(getRandomInteger(71,99)); // 
+//#5--->#6 
