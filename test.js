@@ -82,6 +82,7 @@
 // [ convert arr to obj ] = for (let i = 0; i < arr.length; i += 2)..const key = arr[i]..const value = arr[i + 1];..obj[key] = value
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
+// [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ return Object ] = Return obj[key]
 // [ make arr -> obj ] =  let obj = {value: num, ...}; return obj
@@ -94,6 +95,4 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-//6 --> #1 
-
-
+//7 --> #1 
