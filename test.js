@@ -95,7 +95,7 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+//9-7
 
-
-console.log(toTenAndBeyond(1, 2)); // false
-console.log(toTenAndBeyond(8, 9)); // true
+console.log(findLastNegative([-1, -2, -3])); // -3
+console.log(findLastNegative([-1, 5, 6, 7])); // -1
