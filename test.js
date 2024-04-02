@@ -78,7 +78,7 @@
 // [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ count up ] =  for (let i = 1; i <= arr; i++) ---> count.push(i)
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
-// [ check last - numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)
+// [ check last numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)
 // [ convert arr to obj ] = for (let i = 0; i < arr.length; i += 2)..const key = arr[i]..const value = arr[i + 1];..obj[key] = value
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
@@ -95,4 +95,7 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-//7 --> #1 
+
+
+console.log(toTenAndBeyond(1, 2)); // false
+console.log(toTenAndBeyond(8, 9)); // true
