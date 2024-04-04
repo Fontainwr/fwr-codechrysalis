@@ -1,30 +1,23 @@
 window.addEventListener("load", () => {
-    let clickCounter = 0;
+    let clickCounter = 0; 
 
     function updateButtonText() {
         let message = document.querySelector("#message");
         message.innerText = clickCounter;
-    }
+    };
 
-    let button = document.querySelector("#button");
+    let buttonClick = document.querySelector("#button");
 
-    button.addEventListener("click", (event) => {
-        // Check if Shift key is pressed
-        if (event.key === "space") {
-            // Reset clickCounter to 0 if Shift key is pressed while clicking the button
-            clickCounter = 0;
-        } else {
-            // Increment clickCounter if Shift key is not pressed
-            clickCounter++;
-        }
+    buttonClick.addEventListener( "click", (event) => {
+        clickCounter++;
         updateButtonText();
     });
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowUp") {
             clickCounter++;
-        } else if (event.key === "ArrowDown") {
-            clickCounter--;
+        } else if ( event.key === "ArrowDown"){
+            clickCounter--; 
         }
         updateButtonText();
     });
@@ -32,23 +25,47 @@ window.addEventListener("load", () => {
     let buttonReset = document.querySelector("#buttonReset");
 
     buttonReset.addEventListener("click", (event) => {
-        // Check if Shift key is pressed
         clickCounter = 0;
         updateButtonText();
     });
 
-    
-
-    // Add your code here!
     let counter = 1;
-    const addButton = document.getElementById("add-thing");
-    const divLocation = document.getElementById("a-div-tag");
+    const addButton = document.querySelector("#add-thing");
+    const produce = document.querySelector("#a-div-tag");
 
-    addButton.addEventListener("click", () => {
-        const newP = document.createElement("p");
-        newP.innerText = "Creating a New Paragraph #: " + counter + "!";
-        counter++;
-        
-        divLocation.appendChild(newP);
+    addButton.addEventListener("click", (event) => {
+        let newPh = document.createElement("p");
+        newPh.innerText = "Here is a new pharagraph #: " + counter + "!";
+        counter++
+        produce.appendChild(newPh);
     });
+
+    let removeItem = document.querySelector("#remove");
+
+
+    function removePh() {
+        let content = document.querySelector('#a-div-tag');
+        while ( content.firstChild) {
+            content.removeChild(content.firstChild);
+        }
+    };
+
+    removeItem.addEventListener("click", removePh)
+
+
+
+
+
+    // removeItem.addEventListener("click", () => {
+    //     // let counter = 0;
+    //     let removePh = document.querySelector("p");
+    //     if ( removePh.lenght > 0 ){
+    //     produce.removeChild(removePh[removePh.length -1]);
+    //     // counter--
+    //     } else {
+    //         return "All removed!"
+    //     }
+    // });
+
+    
 });

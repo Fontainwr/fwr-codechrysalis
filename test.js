@@ -1,29 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
-// window.addEventListener("load", () => {
-//     let button = document.getElementById("the-button");
-//     let counterElement = document.getElementById("the-counter");
-//     let resetButton = document.getElementById("reset-button");
-    
-//     button.addEventListener("click", () => {
-//         totalCount += 1;
-//         counterElement.innerText = totalCount;
-
-//         localStorage.setItem("totalCount", totalCount.toString())
-//     }); 
-
-//     resetButton.addEventListener("click", () => {
-//         totalCount -= 1;
-//         counterElement.innerText = totalCount;
-//         localStorage.setItem("totalCount", totalCount.toString())
-//     })
-
-//     counterElement.innerText = totalCount;
-// });
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
 //let runners = [
     // {
     //     name: "Sam",
@@ -99,11 +76,3 @@
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
-
-let closeToTen =  (num1,num2) {
-    
-}
-
-console.log(closeToTen(7, 11)); // 11
-console.log(closeToTen(8, 20)); // 8
-console.log(closeToTen(8, 12)); // 0
