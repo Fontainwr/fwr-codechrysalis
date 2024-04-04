@@ -95,19 +95,15 @@
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
 // [ remove Item] = return X.map( A => A !== undefined ? A : null ).filter( Done => Done !== null)
 // [ square number ] = arr.map(num => num ** 2).filter(result => result);
+// [ search str for letters ] = return str.split(" ").map( letter => x.slice(1,3) === "oo").includes(true)
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+let closeToTen =  (num1,num2) {
+    
+}
 
-
-let createObject = (arr) => { 
-    let obj = {};
-    for (let i = 0; i < arr.length; i += 2 ){
-        obj[arr[i]] = arr[i + 1]
-    };
-    return obj;
-};
-
-console.log(createObject(["animal", "cat", "age", 19, "color", "orange"]));
-// Creates: { "animal": "cat", "age": 19, "color": "orange" }
+console.log(closeToTen(7, 11)); // 11
+console.log(closeToTen(8, 20)); // 8
+console.log(closeToTen(8, 12)); // 0
