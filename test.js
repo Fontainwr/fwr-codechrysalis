@@ -55,10 +55,10 @@
 //============================================================================================
 
 // [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
-// [ count up ] =  for (let i = 1; i <= arr; i++) ---> count.push(i)
+// [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> count.push(i)
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
 // [ check last -numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
-// [ convert arr to obj ] = for (let i = 0; i < arr.length; i += 2)..const key = arr[i]..const value = arr[i + 1];..obj[key] = value
+// [ Arr-to-Obj ] = return arr.reduce((obj, val) => { const type = typeof val;  obj[type] ? obj[type].push(val) : obj[type] = [val]; return obj }, {});
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
@@ -66,7 +66,6 @@
 // [ Return Object ] = Return obj[key]
 // [ Convert arr -> obj ] =  let obj = {}..for (let i = 0; i < arr.length; i += 2 )..obj[arr[i]] = arr[i + 1]
 // [ reverse count from end ] =  return array.slice(-number).reverse();
-// [ make arr -> obj ] =  let obj = {value: num, ...}; return obj
 // [ Random to letters ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
 // [ Random Number ] = return Math.floor(Math.random() * num) + 1;
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
@@ -76,3 +75,22 @@
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
+
+//console.log(
+
+
+
+let phoneBookLookup = (arr,str) => {
+    let final = "";
+    let results = arr.filter( word => word.startsWith(str));
+
+    if ( results.length > 0 ) {
+        return final.push(results); 
+    } else {
+        return "[ N/A ]"
+    }
+}
+
+console.log(phoneBookLookup(["Anne", "Andy", "Zeke"], "A"));
+// should return ["Anne", "Andy"]
+console.log(phoneBookLookup(["Anne", "Andy", "Zeke"], "C"));
