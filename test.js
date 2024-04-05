@@ -76,21 +76,4 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-//console.log(
-
-
-
-let phoneBookLookup = (arr,str) => {
-    let final = "";
-    let results = arr.filter( word => word.startsWith(str));
-
-    if ( results.length > 0 ) {
-        return final.push(results); 
-    } else {
-        return "[ N/A ]"
-    }
-}
-
-console.log(phoneBookLookup(["Anne", "Andy", "Zeke"], "A"));
-// should return ["Anne", "Andy"]
-console.log(phoneBookLookup(["Anne", "Andy", "Zeke"], "C"));
+//#3...1 
