@@ -50,10 +50,11 @@
 // [ .sice(X)] = Remove character.
 // [ .split("") ] = organize via space....You may need to [ .join("") ] it back
 // [ .startsWith("") ] = Cehcks what begins with X
-// [ Typeof ] = Check type of item ---> typeof str.charAt(0) === "string"
+// [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
 
 //============================================================================================
 
+// [ add arr nums ] = for ( let i = 0; i < arr.length; i++){const num = arr[i];if( numn > 0 && um % 10 !== 5) {sum += num ;
 // [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
@@ -76,9 +77,4 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-
-let swapEnds = (arr) => {
-
-};
-
-console.log(["A","B","C","D"])
+//#4 
