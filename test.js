@@ -55,10 +55,10 @@
 //============================================================================================
 
 // [ count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
-// [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> count.push(i)
+// [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
 // [ check last -numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
-// [ Arr-to-Obj ] = return arr.reduce((obj, val) => { const type = typeof val;  obj[type] ? obj[type].push(val) : obj[type] = [val]; return obj }, {});
+// [ Arr-to-Obj ] = let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
@@ -76,4 +76,9 @@
 // [ to retrive character ] = X[1][0] = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-//#3...1 
+
+let swapEnds = (arr) => {
+
+};
+
+console.log(["A","B","C","D"])
