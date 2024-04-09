@@ -35,7 +35,7 @@
 // [ .includes() ] = check if includes item : for numbers .toString().includes("X")
 // [ .map() ] = Creates a new array -->  arr.map(set => set ).filter( num => num > 0);
 // [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
-// [ Math.floor(Math.random()) ] = random number ----> letters[Math.floor(Math.random()
+// [ Math.floor(Math.random()) ] =  return Math.floor(Math.random() * num);
 // [ Math.sign() ] = Check weather a number is positive or zero -> Math.sign(number) === 1,
 // [ Math.round() ] = returns the value of a number rounded to the nearest integer.
 // [ .push() ] = Into a new box
@@ -62,6 +62,7 @@
 // [ Arr-to-Obj ] = let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
+// [ Get whole number ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ Return Object ] = Return obj[key]
@@ -74,7 +75,12 @@
 // [ square number ] = arr.map(num => num ** 2).filter(result => result);
 // [ search str for letters ] = return str.split(" ").map( letter => x.slice(1,3) === "oo").includes(true)
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
-// [ to retrive character ] = X[1][0] = "Second" character and "First" character.
+// [ to retrive character ] =  return str.split(" ")[1][0]; = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-//#4 
+
+let secondWordStartsWith = (str) => {
+    return str.split(" ")[1][0];
+}
+
+console.log(secondWordStartsWith("this is an example")); // i
