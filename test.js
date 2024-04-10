@@ -47,7 +47,7 @@
 // [ .repeat()] = Repeat a something X amount of times 
 // [ /[a-z].test(X)] = Test regex if true based on info code. 
 // [ .slice(x,y) ] = get characters or range ---> or cur one item = X.slice(2)
-// [ .sice(X)] = Remove character.
+// [ .slice(X)] = Remove character.
 // [ .split("") ] = organize via space....You may need to [ .join("") ] it back
 // [ .startsWith("") ] = Cehcks what begins with X
 // [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
@@ -66,6 +66,7 @@
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ Return Object ] = Return obj[key]
+// [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ Convert arr -> obj ] =  let obj = {}..for (let i = 0; i < arr.length; i += 2 )..obj[arr[i]] = arr[i + 1]
 // [ reverse count from end ] =  return array.slice(-number).reverse();
 // [ Random to letters ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
@@ -78,9 +79,4 @@
 // [ to retrive character ] =  return str.split(" ")[1][0]; = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-
-let secondWordStartsWith = (str) => {
-    return str.split(" ")[1][0];
-}
-
-console.log(secondWordStartsWith("this is an example")); // i
+// $7 - #1 
