@@ -1,37 +1,18 @@
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-// [ .abs() ] = check distance to a number = Math.abs(num1 - 10);
-// [ .charAt() ] = Select the character at a position.
-// [ .concat() ] = To repeate string again
-// [ .endsWith() ] = Cehcks what begins with X
-// [ .filter() ] = Create new array and checks
-// [ .find(X, index) ] = find the element you need --> [ arr.find(element => element > 10) ];
-// [ .floor(Math.random()) ] = random number.
-// [ .forEach()] =  iterate over  array --> arr.forEach(word => if(){console.log}
-// [ .includes() ] = check if includes item : for numbers .toString().includes("X")
-// [ .map() ] = Creates a new array -->  arr.map(set => set ).filter( num => num > 0);
-// [ Math.abs() ] = check distance to a number = Math.abs(num1 - 10);
-// [ Math.floor(Math.random()) ] =  return Math.floor(Math.random() * num);
-// [ Math.sign() ] = Check weather a number is positive or zero -> Math.sign(number) === 1,
-// [ Math.round() ] = returns the value of a number rounded to the nearest integer.
-// [ .push() ] = push into main item.
-// [ .toString ] =  Converts str into number -->  return num.toString().includes('0');
-// [ parseInt()] =  Convert boolean result back to number ->   return parseInt(num.toString().includes('0'))
-// [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0);
-// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse();
-// [ .repeat()] = Repeat a something X amount of times 
-// [ /[a-z].test(X)] = Test regex if true based on info code. 
-// [ .slice(x,y) ] = get characters or range ---> or cur one item = X.slice(2)
-// [ .slice(X)] = Remove character.
-// [ .split("") ] = organize via space....You may need to [ .join("") ] it back
-// [ .startsWith("") ] = Cehcks what begins with X
-// [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// [ .abs() ] = Math.abs(num1 - 10) // [ .charAt() ] // [ .concat()] // [ .endsWith() ] // [ .filter() ] 
+// [ .find(X, index) ] = [ arr.find(element => element > 10) ]// [ .floor(Math.random()) ] // [ .forEach()]
+// [ .includes() ] = .toString().includes("X") // [ .map() ] = arr.map(set => set ).filter( num => num > 0)
+// [ Math.abs() ] = Math.abs(num1 - 10) // [ Math.floor(Math.random()) ] = Math.floor(Math.random() * num);
+// [ Math.sign() ] = + or 0 -> Math.sign(number) === 1, // [ Math.round() ] // [ .push() ] = push into main item.
+// [ .toString ] = num.toString().includes('0') // [ parseInt()] = boolean to number -> parseInt(X.toString().includes('0'))
+// [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0); 
+// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse(); // [ .repeat()] 
+// [ .slice(x,y) ] // [ .slice(X)] = Remove character // [ .split("") ] = then  .join("") ] it back
+// [ .startsWith("") ] // [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
 //============================================================================================
-
-// [ add arr nums ] = for ( let i = 0; i < arr.length; i++){const num = arr[i];if( numn > 0 && um % 10 !== 5) {sum += num ;
+// [ add arr nums ] = for ( let i = 0; i < arr.length; i++){const num = arr[i];if( numn > 0 && num % 10 !== 5) {sum += num ;
 // [ Count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ Count up/Back count  ] =  return array.slice(0, number) /  return array.slice(arr.length -  num ).reverse()
 // [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
@@ -41,8 +22,6 @@
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Get whole number ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
-// [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
-// [ Return Object ] = Return obj[key]
 // [ Retrun arr -> obj ] = let obj = {}/for(i = 0; i < arr.len; i+=2)/let key = arr[i];/let val = arr[i + 1]; obj[key] = val;
 // [ Return ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
@@ -58,9 +37,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-let countTwos = (arr) => {
-    
-}
-
-console.log(countTwos([1, 2, 9])); // 1
-console.log(countTwos([1, 2, 2, 3, 2])); // 3
+//file:///C:/Users/Admin/Desktop/Main%20folder/Coding/Coding%20Things/My%20Code%20Chrysalis%209.pdf
+//#7 
