@@ -37,16 +37,15 @@
 // [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
 // [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
 // [ check last - Numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
-// [ Arr-to-Obj ] = let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Get whole number ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ Return Object ] = Return obj[key]
+// [ Retrun arr -> obj ] =  let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
 // [ Return ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
-// [ Convert arr -> obj ] =  let obj = {}..for (let i = 0; i < arr.length; i += 2 )..obj[arr[i]] = arr[i + 1]
 // [ reverse count from end ] =  return array.slice(-number).reverse();
 // [ Random letter using num ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
 // [ Random Number ] = return Math.floor(Math.random() * num) + 1;
@@ -58,13 +57,18 @@
 // [ to retrive character ] =  return str.split(" ")[1][0]; = "Second" character and "First" character.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-let traceFromEdge = (arr, str, num) => {
-    if ( str === "start"){
-        return arr.slice(0, num);
-    } else if ( str === "end"){
-        return arr.slice(arr.length -  num ).reverse()
+
+let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
+
+let createObject = (arr) => {
+    let type = [];
+    let age = [];
+    let colr = [];
+
+    for (let item in arr) {
+        if (typeof)
     }
 }
 
-console.log(traceFromEdge([1, 2, 3, 4, 5], "start", 3)); // [1, 2, 3]
-console.log(traceFromEdge([1, 2, 3, 4, 5], "end", 2)); // [5, 4]
+console.log(createObject(["animal", "cat", "age", 19, "color", "orange"]));
+// Creates: { "animal": "cat", "age": 19, "color": "orange" }
