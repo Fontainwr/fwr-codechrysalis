@@ -43,7 +43,7 @@
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Loop ] = ( let i = 1; i <= X ; i++ ) // or // ( let i = 1; i <= X.length; i++ )
 // [ Return Object ] = Return obj[key]
-// [ Retrun arr -> obj ] =  let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
+// [ Retrun arr -> obj ] = let obj = {}/for(i = 0; i < arr.len; i+=2)/let key = arr[i];/let val = arr[i + 1]; obj[key] = val;
 // [ Return ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ reverse count from end ] =  return array.slice(-number).reverse();
@@ -58,17 +58,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-let num = []...for(let item of arr)...if(typeOf item === "number"){num.push(item)}..return {num,...}
-
-let createObject = (arr) => {
-    let type = [];
-    let age = [];
-    let colr = [];
-
-    for (let item in arr) {
-        if (typeof)
-    }
+let countTwos = (arr) => {
+    
 }
 
-console.log(createObject(["animal", "cat", "age", 19, "color", "orange"]));
-// Creates: { "animal": "cat", "age": 19, "color": "orange" }
+console.log(countTwos([1, 2, 9])); // 1
+console.log(countTwos([1, 2, 2, 3, 2])); // 3
