@@ -17,7 +17,7 @@
 // [ Count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ Count up/Back count  ] =  return array.slice(0, number) /  return array.slice(arr.length -  num ).reverse()
 // [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
-// [ check all String if contains ] = return str.length === 1 && /[a-zA-Z]/.test(str);
+// [ Convert Up/lower ] =  return str.split("").map( letter => if (letter === letter.toUpperCase)...
 // [ check last - Numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
@@ -38,4 +38,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//10 
+
+let swapCase = (str) => {
+    return str.split("").map( letter => {
+        if ( letter === letter.toUpperCase()){
+            return letter.toLowerCase()
+        } else if ( letter === letter.toLowerCase()){
+            return letter.toUpperCase();
+        }
+    }).join("")
+}
+
+console.log(swapCase("abcxyz")); // ABCXYZ
+console.log(swapCase("LMNOP")); // lmnop
+console.log(swapCase("bBbBb")); // BbBbB
+console.log(swapCase("qrsTUV")); // QRStuv
