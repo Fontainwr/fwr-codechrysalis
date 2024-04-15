@@ -13,6 +13,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // [ add arr nums ] = for(let i = 0; i < arr.length; i++){const num = arr[i];if( numn > 0 && num % 10 !== 5) {sum += num ;
+// [ Average ] =const totalSeconds = runners.reduce((acc, runner) => acc + parseFloat(runner.seconds), 0); toalS / run.sec
 // [ Count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ Count up/Back count  ] =  return array.slice(0, number) /  return array.slice(arr.length -  num ).reverse()
 // [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
@@ -37,14 +38,24 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
+let averageTime = (runners) => {
+    const totalSeconds = runners.reduce((acc, runner) => acc + parseFloat(runner.seconds), 0);
+    return totalSeconds / runners.length;
+}
 
-let doesListHaveString = (arr, char) => {
-    arr.forEach(element => {
-        if ( element === char){
-            return true
-        }
-    });
-} 
-
-console.log(doesListHaveString(["a", "b", "c"], "b")); // should return true
-console.log(doesListHaveString(["a", "b", "c"], "d")); // should return false
+let runners = [
+    {
+    name: "Sam",
+    seconds: 1322.728
+    },
+    {
+    name: "Chris",
+    seconds: 1544.159
+    },
+    {
+    name: "Pat",
+    seconds: "1479.008"
+    }
+    ];
+    
+    console.log(averageTime(runners))
