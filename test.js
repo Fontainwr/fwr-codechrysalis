@@ -1,4 +1,3 @@
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // [ .abs() ] = Math.abs(num1 - 10) // [ .charAt() ] // [ .concat()] // [ .endsWith() ] // [ .filter() ] 
@@ -23,12 +22,11 @@
 // [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
-// [ Retrn arr -> obj ] = let obj = {}/for(i = 0; i < arr.len; i+=2)/let key = arr[i];/let val = arr[i + 1]; obj[key] = val;
+// [ Retrn arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++})/let key=arr[i];/let val=arr[i+1];..if(type)..obj.num.push..
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ reverse count from end ] =  return array.slice(-number).reverse();
 // [ Random letter using num ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
-// [ Random Number ] = return Math.floor(Math.random() * num) + 1;
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
 // [ remove Item] = return X.map( A => A !== undefined ? A : null ).filter( Done => Done !== null)
 // [ square number ] = arr.map(num => num ** 2).filter(result => result);
@@ -37,19 +35,16 @@
 // [ to retrive character ] =  return str.split(" ")[1][0]; = "Second" character and "First" character.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//console.log(
 
 
-let swapCase = (str) => {
-    return str.split("").map( letter => {
-        if ( letter === letter.toUpperCase()){
-            return letter.toLowerCase()
-        } else if ( letter === letter.toLowerCase()){
-            return letter.toUpperCase();
+let doesListHaveString = (arr, char) => {
+    arr.forEach(element => {
+        if ( element === char){
+            return true
         }
-    }).join("")
-}
+    });
+} 
 
-console.log(swapCase("abcxyz")); // ABCXYZ
-console.log(swapCase("LMNOP")); // lmnop
-console.log(swapCase("bBbBb")); // BbBbB
-console.log(swapCase("qrsTUV")); // QRStuv
+console.log(doesListHaveString(["a", "b", "c"], "b")); // should return true
+console.log(doesListHaveString(["a", "b", "c"], "d")); // should return false
