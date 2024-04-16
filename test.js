@@ -24,6 +24,7 @@
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Retrn arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++})/let key=arr[i];/let val=arr[i+1];..if(type)..obj.num.push..
+// [ Return arr num-> obj ] =  return numr.map(num => return  {...Math.sign(num) === 1} 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ reverse count from end ] =  return array.slice(-number).reverse();
@@ -37,25 +38,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
+// [ add arr nums ] = for(let i = 0; i < arr.length; i++){const num = arr[i];if( numn > 0 && num % 10 !== 5)
 
-let averageTime = (runners) => {
-    const totalSeconds = runners.reduce((acc, runner) => acc + parseFloat(runner.seconds), 0);
-    return totalSeconds / runners.length;
-}
 
-let runners = [
-    {
-    name: "Sam",
-    seconds: 1322.728
-    },
-    {
-    name: "Chris",
-    seconds: 1544.159
-    },
-    {
-    name: "Pat",
-    seconds: "1479.008"
-    }
-    ];
-    
-    console.log(averageTime(runners))
+
+let containsTwo = (arr) => {
+
+};
+
+
+console.log(containsTwo([1, 2, 3, 4, 5], 2));
+// false, because it only contains one 2.
+console.log(containsTwo([1, 4, 4, 2, 5, 4, 7], 4));
+// true, because there are three 4's and that is more than two.
