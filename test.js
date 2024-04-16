@@ -38,12 +38,22 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
-// [ add arr nums ] = for(let i = 0; i < arr.length; i++){const num = arr[i];if( numn > 0 && num % 10 !== 5)
 
 
 
-let containsTwo = (arr) => {
+let containsTwo = (arr,val) => {
+    let count = 0; 
+    for ( let i = 0; i < arr.length; i ++){
+        if ( arr[i] === val) {
+            count += 1;
+        }
+    }
 
+    if ( count > 2) {
+        return true; 
+    }else {
+        return false; 
+    }
 };
 
 
