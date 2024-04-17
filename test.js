@@ -39,25 +39,4 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
-
-
-let containsTwo = (arr,val) => {
-    let count = 0; 
-    for ( let i = 0; i < arr.length; i ++){
-        if ( arr[i] === val) {
-            count += 1;
-        }
-    }
-
-    if ( count > 2) {
-        return true; 
-    }else {
-        return false; 
-    }
-};
-
-
-console.log(containsTwo([1, 2, 3, 4, 5], 2));
-// false, because it only contains one 2.
-console.log(containsTwo([1, 4, 4, 2, 5, 4, 7], 4));
-// true, because there are three 4's and that is more than two.
+//My Code Chrysalis 6.pdf
