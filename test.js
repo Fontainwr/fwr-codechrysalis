@@ -27,6 +27,7 @@
 // [ Return arr num-> obj ] =  return numr.map(num => return  {...Math.sign(num) === 1} 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
+// [ Return str @#$ ] = return str.split("").map ( char => if (char === "H")...return char;  {}.join("")
 // [ reverse count from end ] =  return array.slice(-number).reverse();
 // [ Random letter using num ] = (let i = 0; i < num; i++)-- result += X[Math.floor(Math.random() * X.length)]
 // [ remove Spaces ] = return str.split("").filter( space => space !== " ").join("")
@@ -38,5 +39,5 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
-
-//My Code Chrysalis 6.pdf
+ 
+//PDF # 8 
