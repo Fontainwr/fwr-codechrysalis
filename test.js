@@ -20,10 +20,11 @@
 // [ Convert Up/lower ] =  return str.split("").map( letter => if (letter === letter.toUpperCase)...
 // [ check last - Numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
 // [ for of loop ] = (let X of str) = checking lists in array
-// [ Get middle item in array ] = return arr[Math.round((arr.length -1) / 2)]
+// [ Get middle item in array ] = return arr[Math.floor((arr.length -1) / 2)]
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
-// [ Retrn arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++})/let key=arr[i];/let val=arr[i+1];..if(type)..obj.num.push..
+// [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++}/ let key = arr[i]..arr[i+1]/obj[key] = val/ retrn obj
+// [ Retrn arr -> obj ] = let obj = {..}/for(i=0;i<arr.len,i++})/let key=arr[i];/let val=arr[i+1];..if(type)..obj.num.push..
 // [ Return arr num-> obj ] =  return numr.map(num => return  {...Math.sign(num) === 1} 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
@@ -39,5 +40,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
- 
-//PDF # 8 
+
+//PDF # 9 
+
