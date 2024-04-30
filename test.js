@@ -41,4 +41,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
-// 10 
+//#1...4
+
+sortingMachine([1, true, 5, "hello", -2, false, "goodbye"]);
+// This should return the following object:
+{
+nums: [1, 5, -2],
+bools: [true, false],
+strs: ["hello", "goodbye"]
+}
