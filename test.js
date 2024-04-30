@@ -24,7 +24,7 @@
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++}/ let key = arr[i]..arr[i+1]/obj[key] = val/ retrn obj
-// [ Retrn arr -> obj ] = let obj = {..}/for(i=0;i<arr.len,i++})/let key=arr[i];/let val=arr[i+1];..if(type)..obj.num.push..
+// [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
 // [ Return arr num-> obj ] =  return numr.map(num => return  {...Math.sign(num) === 1} 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
@@ -41,12 +41,4 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
-//#1...4
-
-sortingMachine([1, true, 5, "hello", -2, false, "goodbye"]);
-// This should return the following object:
-{
-nums: [1, 5, -2],
-bools: [true, false],
-strs: ["hello", "goodbye"]
-}
+//#2 
