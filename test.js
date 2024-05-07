@@ -7,7 +7,7 @@
 // [ Math.sign() ] = + or 0 -> Math.sign(number) === 1, // [ Math.round() ] // [ .push() ] = push into main item.
 // [ .toString ] = num.toString().includes('0') // [ parseInt()] = bool to num -> parseInt(X.toString().includes('0'))
 // [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0); 
-// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse(); // [ .repeat()] 
+// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse(); // [ .repeat()] //[.some() =>item===s.repeat()]
 // [ .slice(x,y) ] // [ .slice(X)] = Remove character // [ .split("") ] = then  .join("") ] it back
 // [ .startsWith("") ] // [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -37,8 +37,11 @@
 // [ search str for letters ] = return str.split(" ").map( letter => x.slice(1,3) === "oo").includes(true)
 // [ switch arr spots ] = if(x.len >= X) ---> [X[0], X[X.length - 1]] = [X[X.length - 1],X[0]]; --> return arr
 // [ to retrive character ] =  return str.split(" ")[1][0]; = "Second" character and "First" character.
+//  if this  [?] ---> add this [:] ---> if not then this 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
-//#2 
+//#3
+
+ 
