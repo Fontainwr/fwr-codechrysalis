@@ -7,7 +7,7 @@
 // [ Math.sign() ] = + or 0 -> Math.sign(number) === 1, // [ Math.round() ] // [ .push() ] = push into main item.
 // [ .toString ] = num.toString().includes('0') // [ parseInt()] = bool to num -> parseInt(X.toString().includes('0'))
 // [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0); 
-// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse(); // [ .repeat()] //[.some() =>item===s.repeat()]
+// [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse(); // [ .repeat()] //[.some()=>item===s.repeat()]
 // [ .slice(x,y) ] // [ .slice(X)] = Remove character // [ .split("") ] = then  .join("") ] it back
 // [ .startsWith("") ] // [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -17,6 +17,7 @@
 // [ Count number ] = for ( let i = 0; i < arr.length; i++) if ( arr[i] === 2)
 // [ Count up/Back count  ] =  return array.slice(0, number) /  return array.slice(arr.length -  num ).reverse()
 // [ count up ] =  let result = []. for (let i = 1; i <= arr; i++) ---> result.push(i)--> return result 
+// [ Check for duplicates ] = result = arr.some((val, i) => arr.indexOf(val) !== i)
 // [ Convert Up/lower ] =  return str.split("").map( letter => if (letter === letter.toUpperCase)...
 // [ check last - Numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
 // [ for of loop ] = (let X of str) = checking lists in array
@@ -25,7 +26,7 @@
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++}/ let key = arr[i]..arr[i+1]/obj[key] = val/ retrn obj
 // [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
-// [ Return arr num-> obj ] =  return numr.map(num => return  {...Math.sign(num) === 1} 
+// [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ Return str @#$ ] = return str.split("").map ( char => if (char === "H")...return char;  {}.join("")
@@ -42,6 +43,4 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
-//#3
-
- 
+// #4 
