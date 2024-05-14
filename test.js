@@ -45,5 +45,19 @@
 
 // #4 ..2
 
-console.log(getThird(["corn", "tomato", "broccoli"])); // "broccoli"
-console.log(getThird(["corn", "pineapple"])); // "No item found."
+let weighIn= (str1,str2) => {
+    let result = [];
+    let together = str
+
+    if ( str1.length > str2.length ) {
+        return str1;
+    } else if ( str2.length > str1.length ) {
+        return str2;
+    } else {
+        result.push(str1 + ", " + str2)
+    }
+    return result; 
+}
+console.log(weighIn("cat", "meow")); // "meow"
+console.log(weighIn("mouse", "duck")); // "mouse"
+console.log(weighIn("moose", "goose")); // ["moose", "goose"]
