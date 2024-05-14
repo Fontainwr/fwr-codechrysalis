@@ -27,6 +27,7 @@
 // [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++}/ let key = arr[i]..arr[i+1]/obj[key] = val/ retrn obj
 // [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
 // [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
+// [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
 // [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ Return str @#$ ] = return str.split("").map ( char => if (char === "H")...return char;  {}.join("")
@@ -45,16 +46,12 @@
 
 // #4 ..2
 
+let properAddress = (str, str1) => {
 
-let whatYear = (arr) => {
+    let first = str.split("").map( char => char.slice(0,3)).join("");
+    let last = str1.slice(-11) 
 
-// for ( let i = 0; i < arr.length; i++){
-//     return arr[i]     
-//     }
-
+    return first + " " + last; 
 }
-
-console.log(whatYear([{year: 1982}, {year: 1975}, {year: 1934}]));
-// [1982, 1975, 1934]
-
-
+console.log(properAddress("Dr.", "Mortimer Bartholomew")); // "Dr. Bartholomew
+console.log(properAddress("Mrs.", "Jenkins")); // "Mrs. Jenkins
