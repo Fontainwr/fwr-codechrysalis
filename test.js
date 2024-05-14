@@ -45,19 +45,16 @@
 
 // #4 ..2
 
-let weighIn= (str1,str2) => {
-    let result = [];
-    let together = str
 
-    if ( str1.length > str2.length ) {
-        return str1;
-    } else if ( str2.length > str1.length ) {
-        return str2;
-    } else {
-        result.push(str1 + ", " + str2)
-    }
-    return result; 
+let whatYear = (arr) => {
+
+// for ( let i = 0; i < arr.length; i++){
+//     return arr[i]     
+//     }
+
 }
-console.log(weighIn("cat", "meow")); // "meow"
-console.log(weighIn("mouse", "duck")); // "mouse"
-console.log(weighIn("moose", "goose")); // ["moose", "goose"]
+
+console.log(whatYear([{year: 1982}, {year: 1975}, {year: 1934}]));
+// [1982, 1975, 1934]
+
+
