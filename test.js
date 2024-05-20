@@ -44,18 +44,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log(
 
-// #5
+// 6-3
 
-let positiveVibesOnly = (arr) => {
-    let result = []
+let removeGreaterThan = (num, arr) => {
+    let result = [];
     arr.forEach(element => {
-        if ( element > 0) {
+        if ( element < 4){
             result.push(element)
         }
     });
     return result; 
 }
 
-console.log(positiveVibesOnly([-5, 3, -45, 28, -1000, 7]));
-// [3, 28, 7]
+console.log(removeGreaterThan(3, [1, 2, 3, 4, 5, 6]));
+// [1, 2, 3]
 
