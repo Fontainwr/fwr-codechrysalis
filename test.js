@@ -46,12 +46,16 @@
 
 // #5
 
-let properAddress = (str, str1) => {
-
-    let first = str.split("").map( char => char.slice(0,3)).join("");
-    let last = str1.slice(-11) 
-
-    return first + " " + last; 
+let positiveVibesOnly = (arr) => {
+    let result = []
+    arr.forEach(element => {
+        if ( element > 0) {
+            result.push(element)
+        }
+    });
+    return result; 
 }
-console.log(properAddress("Dr.", "Mortimer Bartholomew")); // "Dr. Bartholomew
-console.log(properAddress("Mrs.", "Jenkins")); // "Mrs. Jenkins
+
+console.log(positiveVibesOnly([-5, 3, -45, 28, -1000, 7]));
+// [3, 28, 7]
+
