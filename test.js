@@ -46,16 +46,8 @@
 
 // 6-3
 
-let removeGreaterThan = (num, arr) => {
-    let result = [];
-    arr.forEach(element => {
-        if ( element < 4){
-            result.push(element)
-        }
-    });
-    return result; 
+let removeEmpty = (arr) => {
+    return arr.filter( check => check !== undefined && check !== 0)
 }
-
-console.log(removeGreaterThan(3, [1, 2, 3, 4, 5, 6]));
-// [1, 2, 3]
-
+console.log(removeEmpty([12, undefined, 37, 53, undefined, 0]));
+// [12, 37, 53, 0]
