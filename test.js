@@ -44,10 +44,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-// 6-3
+// 5-6
 
-let removeEmpty = (arr) => {
-    return arr.filter( check => check !== undefined && check !== 0)
+let removeOdd = (arr) => {
+
 }
-console.log(removeEmpty([12, undefined, 37, 53, undefined, 0]));
-// [12, 37, 53, 0]
+
+console.log(removeOdd([1, 2, 3, 4, 5, 6]));
+// [2, 4, 6]
