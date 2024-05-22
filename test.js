@@ -44,11 +44,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-// 5-6
+// 5-8
 
 let removeOdd = (arr) => {
-
+    return arr.map( char => char.length )
 }
 
-console.log(removeOdd([1, 2, 3, 4, 5, 6]));
-// [2, 4, 6]
+console.log(removeOdd(["Hi", "Yooo", "sloth", "Greetings", "!"])) ;
+// [ 2, 4, 5, 9, 1]
