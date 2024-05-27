@@ -44,26 +44,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-// 5-8
+// 5-10
 
 
-let firstOfFive = (arr) => {
-    let result = [];
 
-    // arr.forEach(element => { 
-    //     if (arr.length > 6 ) {
-    //     result.push(element[0])
-    //     }
-    // });
-    // return result; 
 
-    for (var i = 0; i < arr.length; i += 1) {
-        // Use the index i here
-        if ( !arr.length < 6) {
-        result.push(arr[i].charAt(0));
-        }
-    }
-    return result; 
-}
-console.log(firstOfFive(["sloth", "monkey", "zoo", "cow", "axolotl", "kangaroo"]))
-// ["s", "m", "a", "k"]
+console.log(adjustForInflationNoSingles([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+// [500, 1000]
+
