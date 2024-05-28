@@ -6,7 +6,7 @@
 // [ Math.abs() ] = Math.abs(num1 - 10) // [ Math.floor(Math.random()) ] = Math.floor(Math.random() * num);
 // [ Math.sign() ] = + or 0 -> Math.sign(number) === 1, // [ Math.round() ] // [ .push() ] = push into main item.
 // [ .toString ] = num.toString().includes('0') // [ parseInt()] = bool to num -> parseInt(X.toString().includes('0'))
-// [ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0); 
+// [ .replace(/A/g, "@")][ .reduce() ] = sum of array -> number.reduce((sum,num) => { return sum + num}, 0); 
 // [ .reverse() ] = reverse the array(first -> last/last -> first) = arr.reverse(); // [ .repeat()] //[.some()=>item===s.repeat()]
 // [ .slice(x,y) ] // [ .slice(X)] = Remove character // [ .split("") ] = then  .join("") ] it back
 // [ .startsWith("") ] // [ Typeof ] = typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
@@ -46,9 +46,13 @@
 
 // 5-10
 
+let obfuscate = (str) => {
+    return str.replace(/A/g, "@")
+              .replace(/E/g, "3")
+              .replace(/L/g, "!")
+              .replace(/O/g, "0")
+              .replace(/S/g, "5")
+              .replace(/r/g, "ETERTW")
+}
 
-
-
-console.log(adjustForInflationNoSingles([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-// [500, 1000]
-
+console.log(obfuscate("HELLO WorldS!")); // H3LL0
