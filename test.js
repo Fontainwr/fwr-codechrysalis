@@ -44,15 +44,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-// 6-3
+// 8-1
 
-let obfuscate = (str) => {
-    return str.replace(/A/g, "@")
-              .replace(/E/g, "3")
-              .replace(/L/g, "!")
-              .replace(/O/g, "0")
-              .replace(/S/g, "5")
-              .replace(/r/g, "ETERTW")
+let createGibberish= (num) => {
+    let result = "";
+
+    for ( let i = 0; i < num; i++) {
+        result += letters[Math.floor(Math.random() * letters.length )]
+    };
+    return result; 
 }
 
-console.log(obfuscate("HELLO WorldS!")); // H3LL0
+let letters =
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+console.log(createGibberish(3)); // "QYV"
+console.log(createGibberish(7)); // "UPWXNLF"
+console.log(createGibberish(0)); // ""
