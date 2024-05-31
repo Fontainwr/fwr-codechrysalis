@@ -44,20 +44,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
+
 // 8-1
 
-let createGibberish= (num) => {
-    let result = "";
-
-    for ( let i = 0; i < num; i++) {
-        result += letters[Math.floor(Math.random() * letters.length )]
-    };
-    return result; 
+let containsSnake = ( str) => {
+    return str.includes("s") || str.includes("S");
 }
 
-let letters =
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-console.log(createGibberish(3)); // "QYV"
-console.log(createGibberish(7)); // "UPWXNLF"
-console.log(createGibberish(0)); // ""
+console.log(containsSnake("snake!")); // true
+console.log(containsSnake("cucumber")); // false
