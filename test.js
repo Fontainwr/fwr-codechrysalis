@@ -45,10 +45,10 @@
 //console.log
 
 
-// 8-1
+// 8-6
 
-let containsSnake = ( str) => {
-    return str.includes("s") || str.includes("S");
+let containsSnake = (str) => { 
+    return str.includes("s");
 }
 
 console.log(containsSnake("snake!")); // true
