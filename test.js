@@ -20,6 +20,7 @@
 // [ Check for duplicates ] = result = arr.some((val, i) => arr.indexOf(val) !== i)
 // [ Convert Up/lower ] =  return str.split("").map( letter => if (letter === letter.toUpperCase)...
 // [ check last - Numbr ] = for ( let i = arr.length - 1; i >= 0; i--) if (arr[i] < 0)..return
+// [ Check nth item of arr "start" ] = if ( str === "start") {return arr.slice(0, num)}...else if {...}rtn arr.sli(-n).rev..
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.floor((arr.length -1) / 2)]
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
@@ -45,11 +46,15 @@
 //console.log
 
 
-// 8-6
+// 8-9
 
-let containsSnake = (str) => { 
-    return str.includes("s");
+let traceFromEdge = (arr, str, num) => {
+    if ( str === "start") {
+        return arr.slice(0, num);
+    } else if ( str === "end") {
+        return arr.slice(-num).reverse();
+    }
 }
 
-console.log(containsSnake("snake!")); // true
-console.log(containsSnake("cucumber")); // false
+console.log(traceFromEdge([1, 2, 3, 4, 5,6 ], "start", 6)); // [1, 2, 3]
+console.log(traceFromEdge([1, 2, 3, 4, 5], "end", 2)); // [5, 4]
