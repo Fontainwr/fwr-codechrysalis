@@ -46,18 +46,7 @@
 //console.log
 
 
-// 8-9
+// 9-4
 
-let createObject = (arr) => {
-    let obj = {};
-
-    for ( let i = 0; i < arr.length; i+=2) {
-        let key = arr[i];
-        let val = arr[i+1] 
-        obj[key] = val;
-    }
-    return obj;
-}
-
-console.log(createObject(["animal", "cat", "age", 19, "color", "orange"]));
-// Creates: { "animal": "cat", "age": 19, "color": "orange" }
+console.log(addEcho("Hello", 4)); // "Helloooo"
+console.log(addEcho("Cat", 3)); // "Cattt"
