@@ -25,7 +25,7 @@
 // [ Get middle item in array ] = return arr[Math.floor((arr.length -1) / 2)]
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
-// [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i++}/ let key = arr[i]..arr[i+1]/obj[key] = val/ retrn obj
+// [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i+=2}/letkey=arr[i]/letval=arr[i+1]/obj[key] = val/ retrn obj
 // [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
 // [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
 // [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
@@ -48,13 +48,16 @@
 
 // 8-9
 
-let traceFromEdge = (arr, str, num) => {
-    if ( str === "start") {
-        return arr.slice(0, num);
-    } else if ( str === "end") {
-        return arr.slice(-num).reverse();
+let createObject = (arr) => {
+    let obj = {};
+
+    for ( let i = 0; i < arr.length; i+=2) {
+        let key = arr[i];
+        let val = arr[i+1] 
+        obj[key] = val;
     }
+    return obj;
 }
 
-console.log(traceFromEdge([1, 2, 3, 4, 5,6 ], "start", 6)); // [1, 2, 3]
-console.log(traceFromEdge([1, 2, 3, 4, 5], "end", 2)); // [5, 4]
+console.log(createObject(["animal", "cat", "age", 19, "color", "orange"]));
+// Creates: { "animal": "cat", "age": 19, "color": "orange" }
