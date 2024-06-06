@@ -48,5 +48,10 @@
 
 // 9-4
 
-console.log(addEcho("Hello", 4)); // "Helloooo"
-console.log(addEcho("Cat", 3)); // "Cattt"
+let sometimesSum = (num1, num2) => {
+    
+}
+
+console.log(sometimesSum(1, 2)); // 3
+console.log(sometimesSum(15, 2)); // Forbidden number
+console.log(sometimesSum(20, 1)); // 21
