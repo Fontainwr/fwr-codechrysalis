@@ -23,13 +23,15 @@
 // [ Check nth item of arr "start" ] = if ( str === "start") {return arr.slice(0, num)}...else if {...}rtn arr.sli(-n).rev..
 // [ for of loop ] = (let X of str) = checking lists in array
 // [ Get middle item in array ] = return arr[Math.floor((arr.length -1) / 2)]
+// [ Get middle item in array ] = let middleIndex = Math.floor((arr[0].length - 1) / 2);return arr.map(row => row[middleIndex]);
 // [ Get whole num ] =  min = Math.ceil(n1); min = Math.floor(n2); return Math.floor(Math.random() * (max - min + 1)) + min
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i+=2}/letkey=arr[i]/letval=arr[i+1]/obj[key] = val/ retrn obj
 // [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
 // [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
 // [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
-// [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("")
+// [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("").
+// [ Return middle string ] =     let findTime = Math.floor((str.length - 1) / 2) + 1/ return str.slice(findTime);
 // [ Retrun specific character ] = return str.split(" ")[0][2]
 // [ Return str @#$ ] = return str.split("").map ( char => if (char === "H")...return char;  {}.join("")
 // [ reverse count from end ] =  return array.slice(-number).reverse();
@@ -46,12 +48,20 @@
 //console.log
 
 
-// 9-4
+// 1-2
 
-let sometimesSum = (num1, num2) => {
-    
+let lessen = (num) => { 
+    if ( num > 0 ){
+        return num - 1;
+    } else if ( num < 0) {
+        return num + 1;
+    } else {
+        return 0; 
+    }
 }
 
-console.log(sometimesSum(1, 2)); // 3
-console.log(sometimesSum(15, 2)); // Forbidden number
-console.log(sometimesSum(20, 1)); // 21
+console.log(lessen(4)); // should return 3
+console.log(lessen(-2)); // should return -1
+console.log(lessen(0)); // should return 0
+console.log(lessen(0.5)); // should return -0.5
+console.log(lessen(0.5)); // should return -0.5
