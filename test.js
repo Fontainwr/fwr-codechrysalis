@@ -50,18 +50,8 @@
 
 // 1-2
 
-let lessen = (num) => { 
-    if ( num > 0 ){
-        return num - 1;
-    } else if ( num < 0) {
-        return num + 1;
-    } else {
-        return 0; 
-    }
+let speakFast = (str) => {
+    return str.split("").filter( other => other !== " ").join("");
 }
 
-console.log(lessen(4)); // should return 3
-console.log(lessen(-2)); // should return -1
-console.log(lessen(0)); // should return 0
-console.log(lessen(0.5)); // should return -0.5
-console.log(lessen(0.5)); // should return -0.5
+console.log(countUp(6)); // returns [1, 2, 3, 4, 5, 6]
