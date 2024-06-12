@@ -50,8 +50,13 @@
 
 // 1-2
 
-let speakFast = (str) => {
-    return str.split("").filter( other => other !== " ").join("");
+let countUpBy2 = (num) => {
+    let result = [];
+    for ( let i = 0; i < num; i+=2) {
+        result.push(i + 1)
+    };
+    return result; 
 }
 
-console.log(countUp(6)); // returns [1, 2, 3, 4, 5, 6]
+console.log(countUpBy2(11)); // returns [1, 3, 5, 7, 9, 11]
+
