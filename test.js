@@ -47,16 +47,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
+// [.some()=>item===s.repeat()
 
-// 1-2
+// 1-5
 
-let countUpBy2 = (num) => {
+
+let countUpCountUp = (num) => {
     let result = [];
-    for ( let i = 0; i < num; i+=2) {
-        result.push(i + 1)
+    for ( let i = 0; i < num; i++) {
+        result.push(i+1); 
     };
-    return result; 
+    return result.concat(result)
 }
 
-console.log(countUpBy2(11)); // returns [1, 3, 5, 7, 9, 11]
+console.log(countUpCountUp(4)); // returns [1, 2, 3, 4, 1, 2, 3, 4]
+
 
