@@ -49,17 +49,13 @@
 
 // [.some()=>item===s.repeat()
 
-// 1-5
+// 2-5
+// return str.split("").map( letter => if (letter === letter.toUpperCase)...
 
-
-let countUpCountUp = (num) => {
-    let result = [];
-    for ( let i = 0; i < num; i++) {
-        result.push(i+1); 
-    };
-    return result.concat(result)
+let doesListHaveString = (arr, str) => {
+    return arr.includes(str)
 }
 
-console.log(countUpCountUp(4)); // returns [1, 2, 3, 4, 1, 2, 3, 4]
-
+console.log(doesListHaveString(["a", "b", "c"], "b")); // should return true
+console.log(doesListHaveString(["a", "b", "c"], "d")); // should return false
 
