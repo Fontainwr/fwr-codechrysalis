@@ -49,13 +49,11 @@
 
 // [.some()=>item===s.repeat()
 
-// 2-5
-// return str.split("").map( letter => if (letter === letter.toUpperCase)...
+// 3-3
 
-let doesListHaveString = (arr, str) => {
-    return arr.includes(str)
-}
+let swapEnds = (str) => {
 
-console.log(doesListHaveString(["a", "b", "c"], "b")); // should return true
-console.log(doesListHaveString(["a", "b", "c"], "d")); // should return false
+};
 
+console.log(swapEnds(""));
+console.log(swapEnds(""));
