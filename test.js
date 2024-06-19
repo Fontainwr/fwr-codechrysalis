@@ -28,7 +28,7 @@
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i+=2}/letkey=arr[i]/letval=arr[i+1]/obj[key] = val/ retrn obj
 // [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
-// [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
+// [ Return arr num-> obj ] =  return num.map(num => { return {vlaue:num, isPo: num>0, isLu: [..].includes(num)}})
 // [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("").
 // [ Return middle string ] =     let findTime = Math.floor((str.length - 1) / 2) + 1/ return str.slice(findTime);
@@ -51,9 +51,15 @@
 
 // 3-3
 
-let swapEnds = (str) => {
+// [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i+=2}/letkey=arr[i]/letval=arr[i+1]/obj[key] = val/ retrn obj
+// [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
+// [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
+// [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
 
-};
 
-console.log(swapEnds(""));
-console.log(swapEnds(""));
+
+// 3-6
+
+
+console.log(pickySum([-2, -1, 0, 1, 2, 3, 4, 5, 3572905925]));
+// returns 10 (because 1 + 2 + 3 + 4 is 10)
