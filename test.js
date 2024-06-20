@@ -47,18 +47,22 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-// [.some()=>item===s.repeat()
 
-// 3-3
+// 3-7
 
-// [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i+=2}/letkey=arr[i]/letval=arr[i+1]/obj[key] = val/ retrn obj
-// [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
-// [ Return arr num-> obj ] =  return numr.map(num => return {vlaue:,isPo...}  {...Math.sign(num) === 1} 
-// [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
+let pickySum = (arr) => {
+    let sum = 0; 
 
+    for ( let i = 0; i < arr.length; i++) {
 
+    const num = arr[i];
 
-// 3-6
+    if ( num > 0 && num % 10 !== 5) {
+        sum += num; 
+    }
+    };
+return sum; 
+}
 
 
 console.log(pickySum([-2, -1, 0, 1, 2, 3, 4, 5, 3572905925]));
