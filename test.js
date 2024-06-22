@@ -48,22 +48,26 @@
 //console.log
 
 
-// 3-7
+// 3-8
 
-let pickySum = (arr) => {
-    let sum = 0; 
+// typeof str.charAt(0) === "string"....includes string -->typeof str.includes("string")
 
-    for ( let i = 0; i < arr.length; i++) {
+// Write a function called isLetter that takes in a string. It returns true if the string you pass
+// in is 1 character long and contains a letter. Otherwise it returns false for all strings that don't
+// fulfill both of those requirements.
+// HINT: You can tell if a character is a string because using .toUpperCase() and
+// .toLowerCase() creates different results
 
-    const num = arr[i];
 
-    if ( num > 0 && num % 10 !== 5) {
-        sum += num; 
+let isLetter = (str) => {
+    if ( str.length >= 1 && typeof str === "string"){
+        return true; 
+    }else {
+        return false; 
     }
-    };
-return sum; 
-}
+};
 
-
-console.log(pickySum([-2, -1, 0, 1, 2, 3, 4, 5, 3572905925]));
-// returns 10 (because 1 + 2 + 3 + 4 is 10)
+console.log(isLetter("Hello"));
+console.log(isLetter("H"));
+console.log(isLetter(""));
+console.log(isLetter(439839));
