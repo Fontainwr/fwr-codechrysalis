@@ -48,6 +48,9 @@
 //console.log
 
 
-// 3-8
+// 4-2
 
 
+
+console.log(getThird(["corn", "tomato", "broccoli"])); // "broccoli"
+console.log(getThird(["corn", "pineapple"])); // "No item found."
