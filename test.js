@@ -53,4 +53,4 @@
 
 
 console.log(getThird(["corn", "tomato", "broccoli"])); // "broccoli"
-console.log(getThird(["corn", "pineapple"])); // "No item found."
+console.log(getThird(["corn", "pineapple"])); // "No item found.".
