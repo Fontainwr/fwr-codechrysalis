@@ -48,9 +48,8 @@
 //console.log
 
 
-// 4-2
+// 4-7
 
 
-
-console.log(getThird(["corn", "tomato", "broccoli"])); // "broccoli"
-console.log(getThird(["corn", "pineapple"])); // "No item found.".
+console.log(easterEggHunt(100)); // true
+console.log(easterEggHunt(73)); // false
