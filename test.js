@@ -50,6 +50,8 @@
 
 // 4-7
 
-
+let easterEggHunt = () => {
+    
+}
 console.log(easterEggHunt(100)); // true
 console.log(easterEggHunt(73)); // false
