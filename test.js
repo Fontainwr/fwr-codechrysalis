@@ -48,10 +48,12 @@
 //console.log
 
 
-// 4-7
+// 4-9
 
-let easterEggHunt = () => {
-    
+// Math.floor(Math.random() * num)
+
+let easterEggHunt = (num) => {
+    return Math.floor(Math.random() * num) + 1
 }
-console.log(easterEggHunt(100)); // true
-console.log(easterEggHunt(73)); // false
+console.log(easterEggHunt(4)); // true
+console.log(easterEggHunt(11)); // false
