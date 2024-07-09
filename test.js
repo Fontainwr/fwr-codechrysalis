@@ -28,6 +28,7 @@
 // [ Get item in arr] = return str.split(" ").filter(word => word.length > 1).map(word => word.charAt(0))[1];
 // [ Return arr -> obj ] = let obj = {}/for(i=0;i<arr.len,i+=2}/letkey=arr[i]/letval=arr[i+1]/obj[key] = val/ retrn obj
 // [ Retrn arr -> obj ] =letobj={nums:[],..}/(i=0;i<arr.len,i++})/if(typearr[i]==="number")..obj.num.push(arr[i]..rtn obj
+// [ Return between two numbers ] floor(.random() * (num2 - num1 + 1 )) + num1)
 // [ Return arr num-> obj ] =  return num.map(num => { return {vlaue:num, isPo: num>0, isLu: [..].includes(num)}})
 // [ Return arr -> obj ] = letresutl=[]...arr.forEach(obj =>...push(obj.year)..return result. 
 // [ Retrn ever-other ] =  str.split("").filter((word, index) => index % 2 === 0).join("").
@@ -49,5 +50,22 @@
 
 
 // 4-9
+
+
+// Write a function called getRandomIntegerInRange
+//that takes in two numbers and returns a
+// random whole number between those two numbers.
+
+
+
+let getRandomIntegerInRange = (num1,num2) => {
+    
+    return Math.floor(Math.random() * (num2 - num1 + 1 )) + num1
+};
+
+console.log(getRandomIntegerInRange(2,10));
+console.log(getRandomIntegerInRange(1,4));
+console.log(getRandomIntegerInRange(22,40));
+
 
 
