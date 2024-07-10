@@ -51,21 +51,11 @@
 
 // 4-9
 
-
-// Write a function called getRandomIntegerInRange
-//that takes in two numbers and returns a
-// random whole number between those two numbers.
-
+let removeGreaterThan = (num, arr) => {
+    return arr.filter( number => number <= num )
+}
 
 
-let getRandomIntegerInRange = (num1,num2) => {
-    
-    return Math.floor(Math.random() * (num2 - num1 + 1 )) + num1
-};
-
-console.log(getRandomIntegerInRange(2,10));
-console.log(getRandomIntegerInRange(1,4));
-console.log(getRandomIntegerInRange(22,40));
-
-
+console.log(removeGreaterThan(3, [1, 2, 3, 4, 5, 6]));
+// [1, 2, 3]
 
