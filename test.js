@@ -51,11 +51,9 @@
 
 // 4-9
 
-let removeGreaterThan = (num, arr) => {
-    return arr.filter( number => number <= num )
+let positiveVibesOnly = (arr) => {
+    return arr.filter( num => num > 0)
 }
 
-
-console.log(removeGreaterThan(3, [1, 2, 3, 4, 5, 6]));
-// [1, 2, 3]
-
+console.log(positiveVibesOnly([-5, 3, -45, 28, -1000, 7]));
+// [3, 28, 7]
