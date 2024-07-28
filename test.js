@@ -49,11 +49,11 @@
 //console.log
 
 
-// 4-9
+// 5-3
 
-let positiveVibesOnly = (arr) => {
-    return arr.filter( num => num > 0)
+let upcaseList = (arr) => {
+
 }
 
-console.log(positiveVibesOnly([-5, 3, -45, 28, -1000, 7]));
-// [3, 28, 7]
+console.log(upcaseList(["hey", "wake", "up"]));
+// ["HEY", "WAKE", "UP"]
