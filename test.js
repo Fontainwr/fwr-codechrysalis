@@ -51,9 +51,9 @@
 
 // 5-3
 
-let upcaseList = (arr) => {
-
+let squareList= (arr) => {
+    return arr.map( num => num ** 2 )
 }
 
-console.log(upcaseList(["hey", "wake", "up"]));
-// ["HEY", "WAKE", "UP"]
+console.log(squareList([1, 2, 3, 4]));
+// [1, 4, 9, 16]
