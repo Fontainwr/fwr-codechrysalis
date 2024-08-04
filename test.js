@@ -51,9 +51,9 @@
 
 // 5-3
 
-let squareList= (arr) => {
-    return arr.map( num => num ** 2 )
+let removeEmpty = (arr) => {
+    
 }
 
-console.log(squareList([1, 2, 3, 4]));
-// [1, 4, 9, 16]
+console.log(removeEmpty([12, undefined, 37, 53, undefined, 0]));
+// [12, 37, 53, 0]
