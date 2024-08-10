@@ -49,11 +49,10 @@
 //console.log
 
 
-// 5-3
-
-let removeEmpty = (arr) => {
-    
+// 5-9
+let sWordsOnly = (arr) => {
+    return arr.filter( letter => letter.startsWith("s"))
 }
 
-console.log(removeEmpty([12, undefined, 37, 53, undefined, 0]));
-// [12, 37, 53, 0]
+console.log(sWordsOnly(["cat", "sloth", "shark", "dog", "zebra", "snow leopard"]))
+// ["sloth", "shark", "snow leopard"]
