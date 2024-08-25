@@ -48,11 +48,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
+let secondWordStartsWith = (str) => {
 
-// 5-9
-let sWordsOnly = (arr) => {
-    return arr.filter( letter => letter.startsWith("s"))
-}
+    let result = str.split(" ")
 
-console.log(sWordsOnly(["cat", "sloth", "shark", "dog", "zebra", "snow leopard"]))
-// ["sloth", "shark", "snow leopard"]
+    return result.map( word => {
+        if (word === "E"){
+            return "3";
+        } if ( word === "L"){
+            return "!"
+        }if ( word === "O"){
+            return "0"
+        }
+    }).join("")
+};
+
+console.log(secondWordStartsWith("HELLO"));
