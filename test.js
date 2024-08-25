@@ -48,19 +48,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-let secondWordStartsWith = (str) => {
+7-3 
 
-    let result = str.split(" ")
 
-    return result.map( word => {
-        if (word === "E"){
-            return "3";
-        } if ( word === "L"){
-            return "!"
-        }if ( word === "O"){
-            return "0"
+let swapCase = (str) => {
+    return str.split("").map( word => {
+        if ( word === word.toUpperCase()){
+            return word.toLowerCase();
+        } else if ( word === word.toLowerCase()){
+            return word.toUpperCase();
         }
-    }).join("")
-};
+    }).join("");
+}
 
-console.log(secondWordStartsWith("HELLO"));
+console.log(swapCase("abcxyz")); // ABCXYZ
+console.log(swapCase("LMNOP")); // lmnop
+console.log(swapCase("bBbBb")); // BbBbB
+console.log(swapCase("qrsTUV")); // QRStuv
