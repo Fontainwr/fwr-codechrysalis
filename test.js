@@ -48,20 +48,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-7-3 
+let addEcho = (str,num) => {
+    let final = str[str.length -1]
 
-
-let swapCase = (str) => {
-    return str.split("").map( word => {
-        if ( word === word.toUpperCase()){
-            return word.toLowerCase();
-        } else if ( word === word.toLowerCase()){
-            return word.toUpperCase();
-        }
-    }).join("");
+    return "[" + str + final.repeat(num - 1) + "]"
 }
 
-console.log(swapCase("abcxyz")); // ABCXYZ
-console.log(swapCase("LMNOP")); // lmnop
-console.log(swapCase("bBbBb")); // BbBbB
-console.log(swapCase("qrsTUV")); // QRStuv
+console.log(addEcho("Hello", 4)); // "Helloooo"
+console.log(addEcho("Cat", 3)); // "Cattt"
+
