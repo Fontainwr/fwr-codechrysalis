@@ -48,12 +48,47 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //console.log
 
-let addEcho = (str,num) => {
-    let final = str[str.length -1]
+//9-8
 
-    return "[" + str + final.repeat(num - 1) + "]"
+let rootyTootyFreshAndFrooty = (str) => {
+    return str.charAt(2) === "o"
 }
 
-console.log(addEcho("Hello", 4)); // "Helloooo"
-console.log(addEcho("Cat", 3)); // "Cattt"
 
+console.log(rootyTootyFreshAndFrooty("Good")); // true
+console.log(rootyTootyFreshAndFrooty("Oops")); // false
+console.log(rootyTootyFreshAndFrooty("Dog")); // false
+console.log(rootyTootyFreshAndFrooty("Ooooh")); // true
+
+
+let closeToTen = (num1,num2) => {
+    let final1 = Math.abs(num1 - 10);
+    let final2 = Math.abs( num2 - 10);
+
+    if ( final1 < final2 ){
+        return num1;
+    } else if ( final2 < final1) {
+        return num2;
+    } else {
+        return 0;
+    }
+}
+
+console.log(closeToTen(7, 11)); // 11
+console.log(closeToTen(8, 20)); // 8
+console.log(closeToTen(8, 12)); // 0
+
+
+let sometimesSum = (num1,num2) => {
+    let finalNumber = num1 + num2;
+
+    if ( finalNumber < 10  || finalNumber > 20){
+        return finalNumber;
+    } else {
+        return "Forbidden Number!"
+    }
+}
+
+console.log(sometimesSum(1, 2)); // 3
+console.log(sometimesSum(15, 2)); // Forbidden number
+console.log(sometimesSum(20, 1)); // 21
