@@ -50,11 +50,3 @@
 
 //9-8
 
-console.log(obfuscate("HELLO")); // H3LL0
-Bonus: Can you do this using an object as a lookup, without using an if statement?
-Problem 3 (Intermediate)
-Write a function called enumerate that takes in a number and another function. Return an
-array that contains the return values for that function when passed the numbers 1 through
-n.
-let double = (x) => {
-
