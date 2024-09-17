@@ -50,3 +50,17 @@
 
 //9-8
 
+let sometimesSum = (num1, num2) => {
+
+    let sum = num1 + num2;
+
+    if ( sum >= 10 && sum <= 20 ){
+        return "Forbidden Number";
+    } else {
+        return sum;
+    };
+};
+
+console.log(sometimesSum(1, 2)); // 3
+console.log(sometimesSum(15, 2)); // Forbidden number
+console.log(sometimesSum(20, 1)); // 21
