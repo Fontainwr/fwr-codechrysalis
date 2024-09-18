@@ -50,22 +50,3 @@
 
 //9-8
 
-Write a function called sometimesSum that takes in two numbers. Return the sum of the
-two numbers, unless the sum is between 10 and 20. In that case, return the
-string
-"Forbidden number".
-console.log(sometimesSum(1, 2)); // 3
-console.log(sometimesSum(15, 2)); // Forbidden number
-console.log(sometimesSum(20, 1)); // 21
-Problem 8 (Intermediate)
-Write a function called rightDownTheMiddle that takes an array of three arrays.
-Each array will have three elements. Return a new array of just the middle elements from each
-array.
-console.log(rightDownTheMiddle([[1,2,3],[4,5,6],[7,8,9]]));
-// [2, 5, 8]
-Problem 9 (Intermediate)
-Write a function called iCutItInHalf that takes in a string of an even length. Return a
-new string that is only the second half of the string.
-console.log(iCutItInHalf("Television")); // "ision"
-console.log(iCutItInHalf("tomato")); // "ato"
-console.log(iCutItInHalf("ConjoinedTwins")); // "edTwins
