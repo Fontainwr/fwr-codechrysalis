@@ -51,12 +51,13 @@
 //9-8
 
 
-let rightDownTheMiddle = (arr) => {
-    return arr.map( num => num[1])
+let iCutItInHalf = (str) => {
+    let findEnd = Math.floor((str.length - 1) / 2) + 1
+    return str.slice(findEnd)
 };
 
 
 
-console.log(rightDownTheMiddle([[1,2,3],[4,5,6],[7,8,9]]));
-// [2, 5, 8]  
-// Test Black top white bottom 
+console.log(iCutItInHalf("Television")); // "ision"
+console.log(iCutItInHalf("tomato")); // "ato"
+console.log(iCutItInHalf("ConjoinedTwins")); // "edTwins"
