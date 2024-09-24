@@ -51,13 +51,11 @@
 //9-8
 
 
-let iCutItInHalf = (str) => {
-    let findEnd = Math.floor((str.length - 1) / 2) + 1
-    return str.slice(findEnd)
+let noDoubles = (arr) => {
+    let double = arr.filter((item, index) => arr.indexOf(item) !== index);
+
+    return double.length === 0;
 };
 
-
-
-console.log(iCutItInHalf("Television")); // "ision"
-console.log(iCutItInHalf("tomato")); // "ato"
-console.log(iCutItInHalf("ConjoinedTwins")); // "edTwins"
+console.log(noDoubles([1, 2, 3, 4])); // true
+console.log(noDoubles([5, 5, 6, 7])); // false
