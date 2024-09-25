@@ -52,9 +52,9 @@
 
 
 let noDoubles = (arr) => {
-    let double = arr.filter((item, index) => arr.indexOf(item) !== index);
+    let checkIfDouble = arr.filter((num, index) => arr.indexOf(num) !== index);
 
-    return double.length === 0;
+    return checkIfDouble.length === 0; 
 };
 
 console.log(noDoubles([1, 2, 3, 4])); // true
