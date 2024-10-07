@@ -51,11 +51,14 @@
 //9-8
 
 
-let noDoubles = (arr) => {
-    let checkIfDouble = arr.filter((num, index) => arr.indexOf(num) !== index);
-
-    return checkIfDouble.length === 0; 
+let weatherStatus = (num1,boolean) => {
+    if ( boolean === true ){
+        return `It is ${num1} degrees and it is currently raining.`
+    } else if(boolean === false) {
+        return `It is ${num1} and it is not raining`
+    } else {
+        return "Try again"
+    }
 };
 
-console.log(noDoubles([1, 2, 3, 4])); // true
-console.log(noDoubles([5, 5, 6, 7])); // false
+console.log(weatherStatus(14, true)); // should return "It is 14 degrees and it is curren
