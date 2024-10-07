@@ -50,15 +50,12 @@
 
 //9-8
 
-
-let weatherStatus = (num1,boolean) => {
-    if ( boolean === true ){
-        return `It is ${num1} degrees and it is currently raining.`
-    } else if(boolean === false) {
-        return `It is ${num1} and it is not raining`
-    } else {
-        return "Try again"
-    }
+let add = (num1,num2) => {
+    let result = num1 + num2;
+    return result;
 };
 
-console.log(weatherStatus(14, true)); // should return "It is 14 degrees and it is curren
+console.log(add(2,3));
+console.log(add(12,3));
+console.log(add(2,33));
+console.log(add(43,99998989898));
