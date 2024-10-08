@@ -50,12 +50,8 @@
 
 //9-8
 
-let add = (num1,num2) => {
-    let result = num1 + num2;
-    return result;
+let speakFast = (str) => {
+    return str.split("").filter( space => space !== " ").join("");
 };
 
-console.log(add(2,3));
-console.log(add(12,3));
-console.log(add(2,33));
-console.log(add(43,99998989898));
+console.log( speakFast("There is many issues with the report."))
