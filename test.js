@@ -50,8 +50,12 @@
 
 //9-8
 
-let speakFast = (str) => {
-    return str.split("").filter( space => space !== " ").join("");
+let count = (num) => {
+    let reuslt = [];
+    for ( let i = 0; i < num ; i++  ){
+        reuslt.push(i  + 1)
+    };
+    return reuslt; 
 };
 
-console.log( speakFast("There is many issues with the report."))
+console.log(count(9))
