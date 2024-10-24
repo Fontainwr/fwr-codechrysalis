@@ -50,12 +50,12 @@
 
 //9-8
 
-let count = (num) => {
-    let reuslt = [];
-    for ( let i = 0; i < num ; i++  ){
-        reuslt.push(i  + 1)
-    };
-    return reuslt; 
+let sayHello = (str) => {
+    if ( str.length > 5){
+        return "Hello World"
+    } else {
+        return "No one here"
+    }
 };
 
-console.log(count(9))
+console.log(sayHello("The Time "));
