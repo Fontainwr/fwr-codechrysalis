@@ -56,6 +56,34 @@ let sayHello = (str) => {
     } else {
         return "No one here"
     }
-};
+};    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}    if ( str.length > 5){
+    return "Hello World"
+} else {
+    return "No one here"
+}
 
 console.log(sayHello("The Time "));
